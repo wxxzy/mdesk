@@ -46,7 +46,7 @@
     </properties>
 
     <modules>
-        <module>rpc-thrift</module>
+        <module>mdesks-rpc</module>
 
     </modules>
 
