@@ -46,7 +46,7 @@
     </properties>
 
     <modules>
-        <module>thriftdemo</module>
+        <module>rpc-thrift</module>
 
     </modules>
 
