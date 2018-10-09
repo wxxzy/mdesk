@@ -1,0 +1,30 @@
+
+logging:
+  level:
+    root: DEBUG
+
+spring:
+  application:
+    name: springboot-rabbitmq
+
+
+  rabbitmq:
+    host: 192.168.56.101
+    port: 5672
+    username: guest
+    password: guest
+    publisher-confirms: true
+    virtual-host: /
+
+  kafka:
+    bootstrap-servers: kafkatest.com:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+    consumer:
+      group-id: test
+      enable-auto-commit: true
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+
+
