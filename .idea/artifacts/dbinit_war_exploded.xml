@@ -83,7 +83,7 @@
         </element>
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/demo/dbinit/target/dbinit-0.0.1/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/example/dbinit/target/dbinit-0.0.1/META-INF/MANIFEST.MF" />
       </element>
       <element id="javaee-facet-resources" facet="dbinit/web/Web" />
     </root>
