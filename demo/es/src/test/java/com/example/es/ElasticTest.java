@@ -29,7 +29,7 @@ public class ElasticTest {
         employeesDO.setGender("M");
         employeesRepository.save(employeesDO);
 
-        DepartmentDO departmentDO= new DepartmentDO();
+        DepartmentDO departmentDO = new DepartmentDO();
         departmentDO.setDeptNo(1);
         departmentDO.setDeptName("开发部");
         departmentRepository.save(departmentDO);

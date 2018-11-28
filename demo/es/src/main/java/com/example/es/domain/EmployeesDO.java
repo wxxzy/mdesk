@@ -7,7 +7,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 
-@Document(indexName = "company",type = "employe" , shards = 8, replicas = 1)
+@Document(indexName = "company", type = "employe", shards = 8, replicas = 1)
 public class EmployeesDO implements Serializable {
     private static final long serialVersionUID = -5486342676464419079L;
     @Id

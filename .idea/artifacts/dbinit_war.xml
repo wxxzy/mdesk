@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="dbinit:war">
+    <output-path>$PROJECT_DIR$/demo/dbinit/target</output-path>
+    <root id="archive" name="dbinit-0.0.1.war">
+      <element id="artifact" artifact-name="dbinit:war exploded" />
+    </root>
+  </artifact>
+</component>

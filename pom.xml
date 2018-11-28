@@ -47,6 +47,8 @@
 
     <modules>
         <module>mdesks-rpc</module>
+        <module>demo</module>
+
 
     </modules>
 
