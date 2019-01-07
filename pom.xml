@@ -45,7 +45,7 @@
 
     <modules>
         <module>mdesks-rpc</module>
-
+        <module>example</module>
     </modules>
 
     <dependencyManagement>
