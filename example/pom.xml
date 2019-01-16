@@ -17,7 +17,7 @@
         <module>es</module>
         <module>demokt</module>
         <module>dubodemo</module>
-
+        <module>distributedlock</module>
     </modules>
 
 
