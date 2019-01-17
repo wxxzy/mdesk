@@ -44,32 +44,34 @@ public class NioTimeClientHandler implements Runnable {
             e.printStackTrace();
             System.exit(1);
         }
-        while (!stop) {
-            try {
+        try {
+            while(!stop) {
                 selector.select(1000);
-                Set<SelectionKey> selectionKeys = selector.selectedKeys();
-                Iterator<SelectionKey> iterable = selectionKeys.iterator();
+                Set<SelectionKey> selectionKeySet = selector.selectedKeys();
+                Iterator<SelectionKey> iterator = selectionKeySet.iterator();
                 SelectionKey key = null;
-                while (iterable.hasNext()) {
-                    key = iterable.next();
-                    iterable.remove();
+                while (iterator.hasNext()) {
+                    key = iterator.next();
+                    iterator.remove();
                     try {
+                        System.out.println(key.toString());
                         handleInput(key);
                     } catch (Exception e) {
+                        e.printStackTrace();
                         if (key != null) {
                             key.cancel();
                             if (key.channel() != null) {
                                 key.channel().close();
                             }
                         }
-                        e.printStackTrace();
                     }
                 }
-            } catch (IOException e) {
-                e.printStackTrace();
-                System.exit(1);
             }
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.exit(1);
         }
+
         if (selector != null) {
             try {
                 selector.close();
@@ -80,31 +82,35 @@ public class NioTimeClientHandler implements Runnable {
     }
 
     private void handleInput(SelectionKey key) throws IOException {
-        if (key.isValid()) {
-            SocketChannel sc = (SocketChannel) key.channel();
-            if (key.isConnectable()) {
-                sc.register(selector, SelectionKey.OP_READ);
-
-                doWrite(sc);
-            } else {
-                System.exit(1);
+        if(key.isValid()){
+            SocketChannel socketChannel = (SocketChannel) key.channel();
+            if(key.isConnectable()){
+                if(socketChannel.finishConnect()){
+                    socketChannel.register(selector,SelectionKey.OP_READ);
+                    doWrite(socketChannel);
+                }else{
+                    System.out.println("connect error");
+                    System.exit(1);
+                }
             }
-            if (key.isReadable()) {
-                ByteBuffer readBuffer = ByteBuffer.allocate(1024);
-                int readBytes = sc.read(readBuffer);
-                if (readBytes > 0) {
-                    readBuffer.flip();
-                    byte[] bytes = new byte[readBuffer.remaining()];
-                    readBuffer.get(bytes);
-                    String body = new String(bytes, "UTF-8");
-                    System.out.println("Now is " + body);
-                    this.stop = true;
-                } else if (readBytes < 0) {
+            if(key.isReadable()){
+                ByteBuffer byteBuffer = ByteBuffer.allocate(1024);
+                int byteLength = socketChannel.read(byteBuffer);
+                if(byteLength>0){
+                    byteBuffer.flip();
+                    byte[] bytes = new byte[byteBuffer.remaining()];
+                    byteBuffer.get(bytes);
+
+                    System.out.println("client received:"+ new String(bytes,"UTF-8"));
+                    //stop = true;
+                    doWrite(socketChannel);
+                }else if(byteLength<0){
                     key.cancel();
-                    sc.close();
-                } else {
+                    socketChannel.close();
+                }else {
                     ;
                 }
+
             }
         }
     }

@@ -79,48 +79,44 @@ public class MultiplexerTimeServer implements Runnable{
 
     }
 
-    private void handleInput(SelectionKey key) throws IOException {
+    private  void handleInput(SelectionKey key) throws IOException{
         if(key.isValid()){
             if(key.isAcceptable()){
                 ServerSocketChannel ssc = (ServerSocketChannel) key.channel();
                 SocketChannel sc = ssc.accept();
-                ssc.configureBlocking(false);
+                sc.configureBlocking(false);
                 sc.register(selector,SelectionKey.OP_READ);
-
             }
             if(key.isReadable()){
-                SocketChannel sc = (SocketChannel) key.channel();
-                ByteBuffer byteBuffer = ByteBuffer.allocate(1024);
-                int readBytes = sc.read(byteBuffer);
-                if(readBytes > 0){
-                    byteBuffer.flip();
-                    byte[] bytes = new byte[byteBuffer.remaining()];
-                    byteBuffer.get(bytes);
-                    String body = new String(bytes, "UTF-8");
-
-                    System.out.println("Server receive order: "+body);
+                SocketChannel sc = (SocketChannel)key.channel();
+                ByteBuffer readBuffer = ByteBuffer.allocate(1024);
+                int readBytes = sc.read(readBuffer);
+                if(readBytes>0){
+                    readBuffer.flip();
+                    byte[] bytes = new byte[readBuffer.remaining()];
+                    readBuffer.get(bytes);
+                    String body = new String(bytes,"UTF-8");
+                    System.out.println("the time server receive order:"+body);
                     //响应指令并返回
-                    String currentTime ="time order".equalsIgnoreCase(body) ?
+                    String currentTime ="query time order".equalsIgnoreCase(body) ?
                             new Date(System.currentTimeMillis()).toString():
                             "bady order";
                     doWrite(sc,currentTime);
-                }else if(readBytes<0){
+                }else if(readBytes <0){
                     key.cancel();
                     sc.close();
-                }else {
-                    ;
                 }
             }
         }
     }
 
     private void doWrite(SocketChannel socketChannel,String response) throws IOException {
-        if (response!=null && response.trim().length()>0){
-            byte[] bytes = response.getBytes();
-            ByteBuffer byteBuffer = ByteBuffer.allocate(bytes.length);
-            byteBuffer.put(bytes);
+        if (response != null && response.trim().length()>0){
+            ByteBuffer byteBuffer = ByteBuffer.allocate(1024);
+            byteBuffer.put(response.getBytes());
             byteBuffer.flip();
             socketChannel.write(byteBuffer);
+            System.out.println("send to client:"+response);
         }
     }
 }
