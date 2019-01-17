@@ -24,7 +24,7 @@ public class BioTimeClient {
         Socket socket = null;
         BufferedReader in = null;
         PrintWriter out = null;
-        //while (true) {
+        while (true) {
             try {
                 socket = new Socket("127.0.0.1", port);
                 in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
@@ -58,6 +58,6 @@ public class BioTimeClient {
                     }
                 }
             }
-        //}
+        }
     }
 }

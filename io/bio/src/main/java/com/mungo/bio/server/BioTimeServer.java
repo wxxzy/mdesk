@@ -20,7 +20,7 @@ public class BioTimeServer {
             }
         }
         ServerSocket server = null;
-
+        BioTimeServerHandlerExecutePool executePool = new BioTimeServerHandlerExecutePool(50,1000);
         try {
             server = new ServerSocket(port);
             System.out.println("server in port:"+port);
@@ -28,7 +28,9 @@ public class BioTimeServer {
             while (true){
                 socket = server.accept();
                 //接收请求并启动新线程处理
-                new Thread(new BioTimeServerHandler(socket)).start();
+                //new Thread(new BioTimeServerHandler(socket)).start();
+                //线程池处理
+                executePool.execute(new BioTimeServerHandler(socket));
             }
         } catch (IOException e) {
             e.printStackTrace();
