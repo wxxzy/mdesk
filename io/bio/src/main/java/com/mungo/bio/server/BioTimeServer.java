@@ -10,7 +10,7 @@ import java.net.Socket;
  * @date 2019/1/17 14:22
  */
 public class BioTimeServer {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         int port = 9000;
         if(args != null &&args.length > 0){
             try {
@@ -37,7 +37,11 @@ public class BioTimeServer {
         }finally {
             if(server !=null){
                 System.out.println("server close");
-                server.close();
+                try {
+                    server.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
                 server = null;
             }
         }
