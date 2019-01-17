@@ -61,6 +61,7 @@ public class BioTimeServerHandler implements Runnable {
                     socket = null;
                 }
             }
+            e.printStackTrace();
         }
     }
 }
