@@ -16,5 +16,7 @@ public class NioTimeClient {
             }
         }
 
+        new Thread(new NioTimeClientHandler("127.0.0.1",port)).start();
+
     }
 }
