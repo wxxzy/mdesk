@@ -1,4 +1,4 @@
-package com.mungo.client;
+package com.mungo.timeserver.client;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;

@@ -1,4 +1,4 @@
-package com.mungo.server;
+package com.mungo.timeserver.server;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;

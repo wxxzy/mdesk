@@ -1,4 +1,4 @@
-package com.mungo.server;
+package com.mungo.timeserver.server;
 
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.socket.SocketChannel;
