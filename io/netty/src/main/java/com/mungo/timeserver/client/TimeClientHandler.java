@@ -15,7 +15,7 @@ public class TimeClientHandler extends ChannelInboundHandlerAdapter {
     private int counter;
     private byte[] bytes;
     public TimeClientHandler() {
-        bytes = "query time order".getBytes();
+        bytes = ("query time order" + System.getProperty("line.separator")).getBytes();
 
     }
 

@@ -22,11 +22,12 @@ public class TimeServerHandler extends ChannelInboundHandlerAdapter {
         byte[] bytes = new byte[byteBuf.readableBytes()];
         byteBuf.readBytes(bytes);
         String body = new String(bytes, "UTF-8");
-        System.out.println("收到命令："+body);
+        System.out.println("收到命令："+body+ " ; counter "+ ++counter);
         //响应指令并返回
-        String currentTime ="query time order".equalsIgnoreCase(body) ?
-                new Date(System.currentTimeMillis()).toString() + " ; counter "+ ++counter:
-                "bady order";
+        String currentTime =("query time order").equalsIgnoreCase(body) ?
+                new Date(System.currentTimeMillis()).toString() + " ; counter "+ counter:
+                "bady order"+ " ; counter "+ counter;
+        currentTime = currentTime + System.getProperty("line.separator");
         ByteBuf resp = Unpooled.copiedBuffer(currentTime.getBytes());
         ctx.write(resp);
     }
