@@ -14,6 +14,8 @@ import java.util.Date;
  */
 public class TimeServerHandler extends ChannelInboundHandlerAdapter {
 
+    private int counter;
+
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
         ByteBuf byteBuf = (ByteBuf) msg;
@@ -23,7 +25,7 @@ public class TimeServerHandler extends ChannelInboundHandlerAdapter {
         System.out.println("收到命令："+body);
         //响应指令并返回
         String currentTime ="query time order".equalsIgnoreCase(body) ?
-                new Date(System.currentTimeMillis()).toString():
+                new Date(System.currentTimeMillis()).toString() + " ; counter "+ ++counter:
                 "bady order";
         ByteBuf resp = Unpooled.copiedBuffer(currentTime.getBytes());
         ctx.write(resp);

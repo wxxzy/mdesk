@@ -11,17 +11,22 @@ import io.netty.channel.ChannelInboundHandlerAdapter;
  * @date 2019/1/18 16:27
  */
 public class TimeClientHandler extends ChannelInboundHandlerAdapter {
-    private final ByteBuf firstMessage;
 
+    private int counter;
+    private byte[] bytes;
     public TimeClientHandler() {
-        byte[] bytes = "query time order".getBytes();
-        firstMessage = Unpooled.buffer(bytes.length);
-        firstMessage.writeBytes(bytes);
+        bytes = "query time order".getBytes();
+
     }
 
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
-        ctx.writeAndFlush(firstMessage);
+        ByteBuf firstMessage = null;
+        for (int i = 0; i < 100; i++) {
+            firstMessage = Unpooled.buffer(bytes.length);
+            firstMessage.writeBytes(bytes);
+            ctx.writeAndFlush(firstMessage);
+        }
     }
 
     @Override
@@ -30,7 +35,7 @@ public class TimeClientHandler extends ChannelInboundHandlerAdapter {
         byte[] req = new byte[buf.readableBytes()];
         buf.readBytes(req);
         String body = new String(req, "UTF-8");
-        System.out.println("Now is :" + body);
+        System.out.println("Now is :" + body + " ; the counter is "+ ++counter);
     }
 
     @Override
