@@ -8,6 +8,7 @@ import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
 import io.netty.handler.codec.DelimiterBasedFrameDecoder;
+import io.netty.handler.codec.FixedLengthFrameDecoder;
 import io.netty.handler.codec.string.StringDecoder;
 
 /**
@@ -26,7 +27,8 @@ public class EchoClient {
                     protected void initChannel(SocketChannel socketChannel) throws Exception {
                         ByteBuf byteBuf = Unpooled.copiedBuffer("$_".getBytes());
                         ChannelPipeline p = socketChannel.pipeline();
-                        p.addLast(new DelimiterBasedFrameDecoder(1024,byteBuf));
+                        //p.addLast(new DelimiterBasedFrameDecoder(1024,byteBuf));
+                        p.addLast(new FixedLengthFrameDecoder(20));
                         p.addLast(new StringDecoder());
                         p.addLast(new EchoClientHandler());
                     }
