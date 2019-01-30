@@ -28,6 +28,7 @@ public class WebSocketHandler extends SimpleChannelInboundHandler<Object> {
 
     @Override
     protected void channelRead0(ChannelHandlerContext ctx, Object msg) throws Exception {
+        //http消息承接握手请求
         if(msg instanceof FullHttpRequest){
             handleHttpRequest(ctx, (FullHttpRequest) msg);
         }else if(msg instanceof WebSocketFrame){
@@ -57,6 +58,7 @@ public class WebSocketHandler extends SimpleChannelInboundHandler<Object> {
             sendHttpResponse(ctx,msg,new DefaultFullHttpResponse(HttpVersion.HTTP_1_1, HttpResponseStatus.BAD_REQUEST));
             return;
         }
+        //握手之后，构建websocket请求
         WebSocketServerHandshakerFactory wsHandshakerFactory = new
                 WebSocketServerHandshakerFactory("ws://localhost:9004/websocket",null,false);
         handshaker = wsHandshakerFactory.newHandshaker(msg);
