@@ -1,8 +1,13 @@
 package com.mungo.udp.server;
 
+import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 import io.netty.channel.socket.DatagramPacket;
+
+import java.util.concurrent.ThreadLocalRandom;
+
+import static io.netty.util.CharsetUtil.UTF_8;
 
 /**
  * @author wangxingxiang
@@ -24,6 +29,21 @@ public class UdpNettyServerHandler extends SimpleChannelInboundHandler<DatagramP
             "宁喝朋友的白水，不吃敌人的蜂蜜"};
     @Override
     protected void channelRead0(ChannelHandlerContext ctx, DatagramPacket msg) throws Exception {
+        String req = msg.content().toString(UTF_8);
+        System.out.println(req);
+        if("query".equals(req)){
+            ctx.writeAndFlush(new DatagramPacket(Unpooled.copiedBuffer("结果："+nextQuote(),UTF_8),msg.sender()));
+        }
+    }
 
+    private String nextQuote() {
+        int quoteId = ThreadLocalRandom.current().nextInt(DICT.length);
+        return DICT[quoteId];
+    }
+
+    @Override
+    public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
+        cause.printStackTrace();
+        ctx.close();
     }
 }
