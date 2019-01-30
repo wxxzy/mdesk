@@ -1,6 +1,5 @@
 package com.mungo.udp.client;
 
-import com.mungo.udp.server.UdpNettyServerHandler;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.buffer.Unpooled;
 import io.netty.channel.Channel;
