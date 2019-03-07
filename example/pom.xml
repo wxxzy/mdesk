@@ -18,6 +18,7 @@
         <module>demokt</module>
         <module>dubodemo</module>
         <module>distributedlock</module>
+        <module>interactive-graph-neo4j</module>
     </modules>
 
 
