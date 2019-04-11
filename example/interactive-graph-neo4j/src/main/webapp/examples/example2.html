@@ -31,7 +31,7 @@
         igraph.i18n.setLanguage("chs");
         var app = new igraph.GraphExplorer(document.getElementById('graphArea'));
         //app.loadGson("honglou.json", function () {
-        app.connect("http://localhost:8080/graph/connector-bolt", function () {
+        app.connect("http://localhost:9080/connector-bolt", function () {
             app.pickup([{
                 name: "过敏性休克"
             }, {

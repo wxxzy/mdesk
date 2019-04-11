@@ -166,14 +166,14 @@ class LoadGraph extends JsonCommandExecutor with Neo4jCommandExecutor {
   }
 
   private def queryEdges(session: Session): Array[Map[String, Any]] = {
-    session.run("MATCH p=()-->() RETURN p").map { result =>
+    session.run("MATCH p=()-->() RETURN p limit 100").map { result =>
       val rel = result.get("p").asPath().relationships().iterator().next();
       wrapRelationship(rel);
     }.toArray
   }
 
   private def queryNodes(session: Session): Array[Map[String, _]] = {
-    session.run("MATCH (n) RETURN n").map { result =>
+    session.run("MATCH (n) RETURN n limit 100").map { result =>
       val node = result.get("n").asNode();
       wrapNode(node);
     }.toArray

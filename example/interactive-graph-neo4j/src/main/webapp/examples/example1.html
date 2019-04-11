@@ -33,9 +33,7 @@
     var app = new igraph.GraphNavigator(document.getElementById('graphArea'));
     console.log(app);
     //app.loadGson("honglou.json");
-    app.connect("http://localhost:8080/connector-bolt", function () {
-        app.pickup();
-    });
+    app.connect("http://localhost:9080/connector-bolt");
 </script>
 </body>
 
