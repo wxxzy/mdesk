@@ -8,3 +8,38 @@ dependency-reduced-pom.xml
 buildNumber.properties
 .mvn/timing.properties
 .mvn/wrapper/maven-wrapper.jar
+
+# maven ignore
+target/
+*.jar
+*.war
+*.zip
+*.tar
+*.tar.gz
+/bin
+*/bin/*
+# eclipse ignore
+.settings/
+.project
+.classpath
+*.class
+
+# idea ignore
+.idea/
+*.ipr
+*.iml
+*.iws
+.metadata
+*.class
+# temp ignore
+*.log
+*.log.*
+*.cache
+*.diff
+*.patch
+*.tmp
+*.class
+
+# system ignore
+.DS_Store
+Thumbs.db
