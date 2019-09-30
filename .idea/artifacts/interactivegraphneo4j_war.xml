@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="interactivegraphneo4j:war">
+    <output-path>$PROJECT_DIR$/example/interactive-graph-neo4j/target</output-path>
+    <root id="archive" name="interactive-graph-neo4j-0.0.1.war">
+      <element id="artifact" artifact-name="interactivegraphneo4j:war exploded" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,1749 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="interactivegraphneo4j:war" />
+    </artifacts-to-build>
+  </component>
+  <component name="AutomaticModuleUnloader">
+    <loaded-modules>
+      <module name="example" />
+      <module name="es" />
+      <module name="dubodemo" />
+      <module name="mdesks-rpc" />
+      <module name="mdesks-parent" />
+      <module name="rpc-thrift" />
+      <module name="demokt" />
+      <module name="distributedlock" />
+    </loaded-modules>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1f7f3713-0813-417f-96cd-f812a6dd497c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_amqp_spring_amqp_2_1_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_amqp_spring_rabbit_2_1_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_amqp_2_1_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_retry_spring_retry_1_2_2_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_messaging_5_1_2_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_1_2_RELEASE.xml" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="$PROJECT_DIR$/mdesks-rpc/target/" />
+    <ignored path="$PROJECT_DIR$/mdesks-rpc/rpc-thrift/target/" />
+    <ignored path="$PROJECT_DIR$/example/target/" />
+    <ignored path="$PROJECT_DIR$/example/demokt/target/" />
+    <ignored path="$PROJECT_DIR$/example/es/target/" />
+    <ignored path="$PROJECT_DIR$/example/dubodemo/target/" />
+    <ignored path="$PROJECT_DIR$/example/distributedlock/target/" />
+    <ignored path="$PROJECT_DIR$/example/distributedlock/distributedlockzk/target/" />
+    <ignored path="$PROJECT_DIR$/example/adminserver/target/" />
+    <ignored path="$PROJECT_DIR$/io/target/" />
+    <ignored path="$PROJECT_DIR$/io/bio/target/" />
+    <ignored path="$PROJECT_DIR$/io/netty/target/" />
+    <ignored path="$PROJECT_DIR$/example/neo4j/target/" />
+    <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
+    <ignored path="$PROJECT_DIR$/example/interactive-graph-neo4j/target/" />
+    <ignored path="$PROJECT_DIR$/example/rabbitmoproducer/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/mdesks_parent$DemoApplication.ic" NAME="DemoApplication Coverage Results" MODIFIED="1543568532938" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/mdesks_parent$AdminServerApplication.ic" NAME="AdminServerApplication Coverage Results" MODIFIED="1554976496667" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="185" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-615132672">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="35" />
+          <entry key="project.open.time.1" value="3" />
+          <entry key="project.open.time.11" value="2" />
+          <entry key="project.open.time.13" value="2" />
+          <entry key="project.open.time.2" value="3" />
+          <entry key="project.open.time.31" value="1" />
+          <entry key="project.open.time.32" value="1" />
+          <entry key="project.open.time.33" value="1" />
+          <entry key="project.open.time.35" value="1" />
+          <entry key="project.open.time.38" value="2" />
+          <entry key="project.open.time.40" value="1" />
+          <entry key="project.open.time.48" value="2" />
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.open.time.50" value="1" />
+          <entry key="project.open.time.52" value="1" />
+          <entry key="project.open.time.53" value="1" />
+          <entry key="project.open.time.54" value="1" />
+          <entry key="project.open.time.56" value="1" />
+          <entry key="project.open.time.58" value="2" />
+          <entry key="project.open.time.59" value="1" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.open.time.63" value="1" />
+          <entry key="project.open.time.7" value="1" />
+          <entry key="project.open.time.74" value="1" />
+          <entry key="project.open.time.79" value="1" />
+          <entry key="project.open.time.86" value="1" />
+          <entry key="project.open.time.90" value="1" />
+          <entry key="project.opened" value="35" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="class" value="56" />
+          <entry key="css" value="1" />
+          <entry key="gitignore" value="1" />
+          <entry key="groovy" value="1" />
+          <entry key="html" value="22" />
+          <entry key="iml" value="1" />
+          <entry key="java" value="211" />
+          <entry key="js" value="8" />
+          <entry key="json" value="9" />
+          <entry key="kt" value="9" />
+          <entry key="md" value="1" />
+          <entry key="png" value="9" />
+          <entry key="pom" value="8" />
+          <entry key="properties" value="43" />
+          <entry key="scala" value="33" />
+          <entry key="t" value="1" />
+          <entry key="thrift" value="3" />
+          <entry key="ts" value="3" />
+          <entry key="txt" value="9" />
+          <entry key="xml" value="57" />
+          <entry key="yml" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CLASS" value="56" />
+          <entry key="CSS" value="1" />
+          <entry key="HTML" value="22" />
+          <entry key="IDEA_MODULE" value="1" />
+          <entry key="Image" value="9" />
+          <entry key="JAVA" value="211" />
+          <entry key="JSON" value="9" />
+          <entry key="JavaScript" value="8" />
+          <entry key="Kotlin" value="9" />
+          <entry key="Markdown" value="1" />
+          <entry key="PLAIN_TEXT" value="11" />
+          <entry key="Properties" value="43" />
+          <entry key="Scala" value="33" />
+          <entry key="Scratch" value="1" />
+          <entry key="Thrift" value="3" />
+          <entry key="TypeScript" value="3" />
+          <entry key="XML" value="65" />
+          <entry key="YAML" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="html" value="31" />
+          <entry key="java" value="8067" />
+          <entry key="kt" value="42" />
+          <entry key="properties" value="132" />
+          <entry key="scala" value="21" />
+          <entry key="txt" value="82" />
+          <entry key="xml" value="118" />
+          <entry key="yml" value="26" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="HTML" value="31" />
+          <entry key="JAVA" value="8067" />
+          <entry key="Kotlin" value="42" />
+          <entry key="PLAIN_TEXT" value="82" />
+          <entry key="Properties" value="132" />
+          <entry key="Scala" value="21" />
+          <entry key="XML" value="118" />
+          <entry key="YAML" value="26" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.spring.boot.mvc.usages">
+        <counts>
+          <entry key="DefaultRequestNavigator.fromToolWindow" value="1" />
+          <entry key="RestClientRequestRunnerNavigator.fromToolWindow" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="mdesks-parent" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/example/rabbitmoproducer/src/main/java/com/example/rabbitmoproducer/CommandLineRunnerImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="324">
+              <caret line="20" column="27" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/example/rabbitmoproducer/src/main/java/com/example/rabbitmoproducer/MsgProducer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="365">
+              <caret line="43" column="5" lean-forward="true" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/example/rabbitmoproducer/src/main/java/com/example/rabbitmoproducer/MsgReceiver.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/example/rabbitmoproducer/src/main/java/com/example/rabbitmoproducer/RabbitConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="648">
+              <caret line="59" column="31" selection-start-line="59" selection-start-column="31" selection-end-line="59" selection-end-column="31" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#3101#3102#0" expanded="true" />
+                <element signature="e#3154#3155#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/example/rabbitmoproducer/src/main/java/com/example/rabbitmoproducer/RabbitmoproducerApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin File" />
+        <option value="Class" />
+        <option value="Kotlin Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>connector-bolt</find>
+      <find>index</find>
+      <find>person</find>
+      <find>location</find>
+      <find>name</find>
+      <find>image</find>
+      <find>Connected</find>
+      <find>match</find>
+      <find>MATCH</find>
+      <find>id</find>
+      <find>expr</find>
+      <find>limit</find>
+      <find>filterNodesByCategory</find>
+      <find>value</find>
+      <find>label</find>
+      <find>loadGraph</find>
+      <find>commons-io</find>
+      <find>neo4j-base</find>
+      <find>neo4j-bolt</find>
+      <find>org.apache.commons</find>
+      <find>LoadGraph</find>
+      <find>lib</find>
+      <find>configFile</find>
+      <find>ping</find>
+      <find>Iface</find>
+      <find>HelloServiceImpl</find>
+      <find>接收处理队列A当中的消息</find>
+      <find>amqp</find>
+      <find>rabbitTemplate</find>
+      <find>EXCHANGE_A</find>
+    </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="SIGN_OFF_COMMIT" value="true" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/io/netty/src/main/java/com/mungo/udp/server/UdpNettyServer.java" />
+        <option value="$PROJECT_DIR$/io/netty/src/main/java/com/mungo/udp/client/UdpNettyClient.java" />
+        <option value="$PROJECT_DIR$/io/netty/src/main/java/com/mungo/file/filechannel/UseFileChannel.java" />
+        <option value="$PROJECT_DIR$/test.txt" />
+        <option value="$PROJECT_DIR$/io/netty/src/main/java/com/mungo/file/server/FileServerHandler.java" />
+        <option value="$PROJECT_DIR$/io/netty/src/main/java/com/mungo/file/server/FileServer.java" />
+        <option value="$PROJECT_DIR$/io/netty/src/main/java/com/mungo/selfprotocol/SelfMessage.java" />
+        <option value="$PROJECT_DIR$/io/netty/src/main/java/com/mungo/selfprotocol/Header.java" />
+        <option value="$PROJECT_DIR$/io/netty/src/main/java/com/mungo/selfprotocol/SelfMessageEncoder.java" />
+        <option value="$PROJECT_DIR$/io/netty/src/main/java/com/mungo/selfprotocol/SelfMarshallingEncoder.java" />
+        <option value="$PROJECT_DIR$/example/neo4j/pom.xml" />
+        <option value="$PROJECT_DIR$/example/neo4j/src/main/java/com/example/neo4j/Neo4jConfig.java" />
+        <option value="$PROJECT_DIR$/example/neo4j/src/main/java/com/example/neo4j/relation/CommondDrug.java" />
+        <option value="$PROJECT_DIR$/example/neo4j/src/main/java/com/example/neo4j/relation/RecommandDrug.java" />
+        <option value="$PROJECT_DIR$/example/neo4j/src/main/java/com/example/neo4j/domain/Drug.java" />
+        <option value="$PROJECT_DIR$/example/neo4j/src/main/java/com/example/neo4j/controller/DDController.java" />
+        <option value="$PROJECT_DIR$/example/neo4j/src/main/java/com/example/neo4j/dao/DiseaseRepository.java" />
+        <option value="$PROJECT_DIR$/example/neo4j/src/main/java/com/example/neo4j/dao/DrugRepository.java" />
+        <option value="$PROJECT_DIR$/example/neo4j/src/main/java/com/example/neo4j/domain/Disease.java" />
+        <option value="$PROJECT_DIR$/example/neo4j/src/main/java/com/example/neo4j/Neo4jApplication.java" />
+        <option value="$PROJECT_DIR$/example/neo4j/src/main/java/com/example/neo4j/relation/Test.java" />
+        <option value="$PROJECT_DIR$/example/neo4j/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/example/interactive-graph-neo4j/src/main/webapp/scriptFile.scala" />
+        <option value="$PROJECT_DIR$/example/interactive-graph-neo4j/src/main/webapp/WEB-INF/conf1.properties" />
+        <option value="$PROJECT_DIR$/example/interactive-graph-neo4j/src/main/webapp/WEB-INF/deugconf.properties" />
+        <option value="$PROJECT_DIR$/example/interactive-graph-neo4j/src/main/scala/org/interactivegraph/server/ConnectorServlet.scala" />
+        <option value="$PROJECT_DIR$/example/interactive-graph-neo4j/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/example/interactive-graph-neo4j/src/main/scala/org/interactivegraph/server/neo4j/executors.scala" />
+        <option value="$PROJECT_DIR$/example/interactive-graph-neo4j/pom.xml" />
+        <option value="$PROJECT_DIR$/example/interactive-graph-neo4j/src/main/webapp/examples/example1.html" />
+        <option value="$PROJECT_DIR$/example/interactive-graph-neo4j/src/main/webapp/examples/example2.html" />
+        <option value="$PROJECT_DIR$/example/interactive-graph-neo4j/src/main/webapp/examples/example3.html" />
+        <option value="$PROJECT_DIR$/example/adminserver/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/example/dubodemo/src/main/java/com/example/dubodemo/DubodemoApplication.java" />
+        <option value="$PROJECT_DIR$/example/dubodemo/pom.xml" />
+        <option value="$PROJECT_DIR$/example/dubodemo/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/example/dubodemo/src/main/java/com/example/dubodemo/SentinelDemo.java" />
+        <option value="$PROJECT_DIR$/mdesks-rpc/rpc-thrift/src/main/java/com/thrift/invoker/SimpleClient.java" />
+        <option value="$PROJECT_DIR$/mdesks-rpc/rpc-thrift/src/main/java/com/thrift/service/HelloServiceImpl.java" />
+        <option value="$PROJECT_DIR$/io/netty/src/main/java/com/mungo/websocket/server/WebSocketHandler.java" />
+        <option value="$PROJECT_DIR$/example/es/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/example/rabbitmoproducer/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/example/demokt/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/example/demokt/pom.xml" />
+        <option value="$PROJECT_DIR$/example/demokt/src/main/kotlin/com/example/demo/SecurityPermitAllConfig.kt" />
+        <option value="$PROJECT_DIR$/example/rabbitmoproducer/src/main/java/com/example/rabbitmoproducer/MsgReceiver.java" />
+        <option value="$PROJECT_DIR$/example/rabbitmoproducer/src/main/java/com/example/rabbitmoproducer/CommandLineRunnerImpl.java" />
+        <option value="$PROJECT_DIR$/example/rabbitmoproducer/src/main/java/com/example/rabbitmoproducer/RabbitConfig.java" />
+        <option value="$PROJECT_DIR$/example/demokt/src/main/kotlin/com/example/demo/RabbitConfig.kt" />
+        <option value="$PROJECT_DIR$/example/demokt/src/main/kotlin/com/example/demo/MsgReceiver.kt" />
+        <option value="$PROJECT_DIR$/example/rabbitmoproducer/src/main/java/com/example/rabbitmoproducer/MsgProducer.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="D:/dev/apache-maven-3.5.0" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="dubodemo" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="dubodemo" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-7" />
+    <option name="width" value="1380" />
+    <option name="height" value="735" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="mdesks-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mdesks" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mdesks-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mdesks" type="462c0819:PsiDirectoryNode" />
+              <item name="example" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mdesks-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mdesks" type="462c0819:PsiDirectoryNode" />
+              <item name="example" type="462c0819:PsiDirectoryNode" />
+              <item name="demokt" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mdesks-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mdesks" type="462c0819:PsiDirectoryNode" />
+              <item name="example" type="462c0819:PsiDirectoryNode" />
+              <item name="demokt" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mdesks-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mdesks" type="462c0819:PsiDirectoryNode" />
+              <item name="example" type="462c0819:PsiDirectoryNode" />
+              <item name="demokt" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mdesks-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mdesks" type="462c0819:PsiDirectoryNode" />
+              <item name="example" type="462c0819:PsiDirectoryNode" />
+              <item name="demokt" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mdesks-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mdesks" type="462c0819:PsiDirectoryNode" />
+              <item name="example" type="462c0819:PsiDirectoryNode" />
+              <item name="demokt" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mdesks-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mdesks" type="462c0819:PsiDirectoryNode" />
+              <item name="example" type="462c0819:PsiDirectoryNode" />
+              <item name="demokt" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mdesks-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mdesks" type="462c0819:PsiDirectoryNode" />
+              <item name="example" type="462c0819:PsiDirectoryNode" />
+              <item name="rabbitmoproducer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mdesks-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mdesks" type="462c0819:PsiDirectoryNode" />
+              <item name="example" type="462c0819:PsiDirectoryNode" />
+              <item name="rabbitmoproducer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mdesks-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mdesks" type="462c0819:PsiDirectoryNode" />
+              <item name="example" type="462c0819:PsiDirectoryNode" />
+              <item name="rabbitmoproducer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mdesks-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mdesks" type="462c0819:PsiDirectoryNode" />
+              <item name="example" type="462c0819:PsiDirectoryNode" />
+              <item name="rabbitmoproducer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mdesks-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mdesks" type="462c0819:PsiDirectoryNode" />
+              <item name="example" type="462c0819:PsiDirectoryNode" />
+              <item name="rabbitmoproducer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="rabbitmoproducer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mdesks-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mdesks" type="462c0819:PsiDirectoryNode" />
+              <item name="example" type="462c0819:PsiDirectoryNode" />
+              <item name="rabbitmoproducer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="SearchEverywhereHistoryKey" value="msg&#9;null&#9;null" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1568891729443" />
+    <property name="jdk.selected.JAVA_MODULE" value="1.8" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/akka-quickstart-java" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.1484375" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="http.proxy" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.mungo.selfprotocol" />
+      <recent name="com.mungo.file.server" />
+      <recent name="com.mungo.udp.client" />
+      <recent name="com.mungo.udp.server" />
+      <recent name="com.mungo.websocket.server" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.neo4j.dao" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\workspace\java\mdesks\example\interactive-graph-neo4j\src\main\webapp\WEB-INF" />
+      <recent name="D:\workspace\java\mdesks\example\interactive-graph-neo4j\src\main\webapp" />
+      <recent name="D:\workspace\java\mdesks\example\interactive-graph-neo4j\src\main" />
+      <recent name="D:\workspace\java\mdesks\example\interactive-graph-neo4j\src\main\resources" />
+      <recent name="D:\workspace\java\mdesks" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+    <option name="contentProportion" value="0.12905718" />
+  </component>
+  <component name="RunManager" selected="Spring Boot.RabbitmoproducerApplication">
+    <configuration name="SentinelDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.dubodemo.SentinelDemo" />
+      <module name="dubodemo" />
+      <option name="VM_PARAMETERS" value="-Dcsp.sentinel.dashboard.server=127.0.0.1:8080" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.dubodemo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WebSocketServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.mungo.websocket.server.WebSocketServer" />
+      <module name="netty" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mungo.websocket.server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="com.example.demo.DemoApplicationKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+      <module name="demokt" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="com.example.demo.DemoApplicationKt" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AdminServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="adminserver" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.adminserver.AdminServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="rpc-thrift" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.boot.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="demokt" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.demo.DemoApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DistributedlockzkApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="distributedlockzk" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.mungo.distributedlockzk.DistributedlockzkApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DubodemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="dubodemo" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.dubodemo.DubodemoApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="es" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.es.EsApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Neo4jApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="neo4j" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.neo4j.Neo4jApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RabbitmoproducerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="rabbitmoproducer" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.rabbitmoproducer.RabbitmoproducerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="graph" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0.62" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:9080/" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="interactivegraphneo4j:war">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_mdesks-parent_2" />
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="55116" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="interactivegraphneo4j:war" />
+        </option>
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Spring Boot.Application" />
+      <item itemvalue="Spring Boot.DemoApplication" />
+      <item itemvalue="Spring Boot.EsApplication" />
+      <item itemvalue="Spring Boot.DubodemoApplication" />
+      <item itemvalue="Spring Boot.DistributedlockzkApplication" />
+      <item itemvalue="Spring Boot.AdminServerApplication" />
+      <item itemvalue="Spring Boot.Neo4jApplication" />
+      <item itemvalue="Tomcat Server.graph" />
+      <item itemvalue="Spring Boot.RabbitmoproducerApplication" />
+      <item itemvalue="Application.SentinelDemo" />
+      <item itemvalue="Application.WebSocketServer" />
+      <item itemvalue="Kotlin.com.example.demo.DemoApplicationKt" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Kotlin.com.example.demo.DemoApplicationKt" />
+        <item itemvalue="Application.WebSocketServer" />
+        <item itemvalue="Application.SentinelDemo" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SbtLocalSettings">
+    <option name="projectSyncType">
+      <map>
+        <entry key="$PROJECT_DIR$/../../scala/guzi" value="PREVIEW" />
+      </map>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1f7f3713-0813-417f-96cd-f812a6dd497c" name="Default Changelist" comment="" />
+      <created>1543374512634</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1543374512634</updated>
+      <workItem from="1543374515592" duration="111000" />
+      <workItem from="1543374738084" duration="1201000" />
+      <workItem from="1543567809021" duration="1599000" />
+      <workItem from="1543823705822" duration="641000" />
+      <workItem from="1546827784235" duration="1119000" />
+      <workItem from="1546828908998" duration="6407000" />
+      <workItem from="1547623334591" duration="6133000" />
+      <workItem from="1547705079660" duration="49499000" />
+      <workItem from="1548295559804" duration="3126000" />
+      <workItem from="1548832109198" duration="23718000" />
+      <workItem from="1549849705610" duration="3910000" />
+      <workItem from="1549872183070" duration="1748000" />
+      <workItem from="1549958489082" duration="3010000" />
+      <workItem from="1549963461137" duration="4033000" />
+      <workItem from="1550049765380" duration="8292000" />
+      <workItem from="1550202168279" duration="2036000" />
+      <workItem from="1551320009317" duration="8214000" />
+      <workItem from="1551425668944" duration="14000" />
+      <workItem from="1551855574124" duration="1345000" />
+      <workItem from="1551857120204" duration="21495000" />
+      <workItem from="1551953770101" duration="17375000" />
+      <workItem from="1552356334777" duration="715000" />
+      <workItem from="1554967012194" duration="11367000" />
+      <workItem from="1555062154214" duration="1334000" />
+      <workItem from="1555401329031" duration="1382000" />
+      <workItem from="1555588939659" duration="1535000" />
+      <workItem from="1555643734138" duration="1153000" />
+      <workItem from="1555928979347" duration="23000" />
+      <workItem from="1559100287691" duration="2328000" />
+      <workItem from="1566887104668" duration="1262000" />
+      <workItem from="1567390714624" duration="1018000" />
+      <workItem from="1567498146297" duration="1267000" />
+      <workItem from="1568886067803" duration="4992000" />
+      <workItem from="1568893579511" duration="14000" />
+      <workItem from="1569821931657" duration="934000" />
+    </task>
+    <task id="LOCAL-00001" summary="1">
+      <created>1546827826929</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1546827826929</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Distributedlockzk">
+      <created>1547623750223</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1547623750223</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Distributedlockzk">
+      <created>1547623770419</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1547623770419</updated>
+    </task>
+    <task id="LOCAL-00004" summary="admin">
+      <created>1547705113083</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1547705113083</updated>
+    </task>
+    <task id="LOCAL-00005" summary="bio">
+      <created>1547709291950</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1547709291950</updated>
+    </task>
+    <task id="LOCAL-00006" summary="bio">
+      <created>1547710002765</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1547710002765</updated>
+    </task>
+    <task id="LOCAL-00007" summary="bio ExecutePool">
+      <created>1547711486287</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1547711486287</updated>
+    </task>
+    <task id="LOCAL-00008" summary="bio ExecutePool">
+      <created>1547712330007</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1547712330007</updated>
+    </task>
+    <task id="LOCAL-00009" summary="nio">
+      <created>1547713322678</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1547713322678</updated>
+    </task>
+    <task id="LOCAL-00010" summary="nio">
+      <created>1547724291493</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1547724291493</updated>
+    </task>
+    <task id="LOCAL-00011" summary="nio">
+      <created>1547725513137</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1547725513137</updated>
+    </task>
+    <task id="LOCAL-00012" summary="aio">
+      <created>1547792609811</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1547792609811</updated>
+    </task>
+    <task id="LOCAL-00013" summary="netty">
+      <created>1547800720958</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1547800720958</updated>
+    </task>
+    <task id="LOCAL-00014" summary="netty4">
+      <created>1547800899366</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1547800899366</updated>
+    </task>
+    <task id="LOCAL-00015" summary="netty4">
+      <created>1547802692659</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1547802692659</updated>
+    </task>
+    <task id="LOCAL-00016" summary="netty4 粘包拆包">
+      <created>1547809673258</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1547809673258</updated>
+    </task>
+    <task id="LOCAL-00017" summary="DelimiterBasedFrameDecoder">
+      <created>1548142126240</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1548142126240</updated>
+    </task>
+    <task id="LOCAL-00018" summary="FixedLengthFrameDecoder">
+      <created>1548142978065</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1548142978065</updated>
+    </task>
+    <task id="LOCAL-00019" summary="FixedLengthFrameDecoder">
+      <created>1548841599884</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1548841599884</updated>
+    </task>
+    <task id="LOCAL-00020" summary="websocket">
+      <created>1548841777469</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1548841777469</updated>
+    </task>
+    <task id="LOCAL-00021" summary="udp">
+      <created>1548843116035</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1548843116035</updated>
+    </task>
+    <task id="LOCAL-00022" summary="udp">
+      <created>1548843602060</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1548843602060</updated>
+    </task>
+    <task id="LOCAL-00023" summary="udp Server">
+      <created>1548844033841</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1548844033841</updated>
+    </task>
+    <task id="LOCAL-00024" summary="udp client">
+      <created>1548844711696</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1548844711696</updated>
+    </task>
+    <task id="LOCAL-00025" summary="udp client">
+      <created>1548844729618</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1548844729618</updated>
+    </task>
+    <task id="LOCAL-00026" summary="FileChannel">
+      <created>1548916034041</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1548916034041</updated>
+    </task>
+    <task id="LOCAL-00027" summary="FileServer">
+      <created>1548924352950</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1548924352951</updated>
+    </task>
+    <task id="LOCAL-00028" summary="neo4j">
+      <created>1549958732035</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1549958732035</updated>
+    </task>
+    <task id="LOCAL-00029" summary="neo4j">
+      <created>1550132146471</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1550132146471</updated>
+    </task>
+    <task id="LOCAL-00030" summary="netty4">
+      <created>1550202315032</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1550202315032</updated>
+    </task>
+    <task id="LOCAL-00031" summary="neo4j">
+      <created>1551855658227</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1551855658227</updated>
+    </task>
+    <task id="LOCAL-00032" summary="add interactivegraph">
+      <created>1551926734950</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1551926734950</updated>
+    </task>
+    <task id="LOCAL-00033" summary="add interactivegraph demo">
+      <created>1554969834143</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1554969834143</updated>
+    </task>
+    <task id="LOCAL-00034" summary="add sentinel">
+      <created>1555051610016</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1555051610016</updated>
+    </task>
+    <task id="LOCAL-00035" summary="add sentinel">
+      <created>1568886654916</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1568886654916</updated>
+    </task>
+    <task id="LOCAL-00036" summary="add sentinel">
+      <created>1569823305153</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1569823305154</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="194350000" />
+  </component>
+  <component name="TodoView" selected-index="1">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49753696" visible="true" weight="0.24357034" />
+      <window_info id="Designer" order="1" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="UI Designer" order="3" />
+      <window_info id="Favorites" order="4" sideWeight="0.500821" side_tool="true" weight="0.24583964" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Web" order="6" side_tool="true" />
+      <window_info id="Structure" order="7" sideWeight="0.50246304" weight="0.22314675" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32512316" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49848714" weight="0.43349755" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32840723" />
+      <window_info anchor="bottom" id="FindBugs-IDEA" order="7" weight="0.32840723" />
+      <window_info anchor="bottom" id="SBT Console" order="8" weight="0.32840723" />
+      <window_info anchor="bottom" id="Spring" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32840723" />
+      <window_info anchor="bottom" id="Application Servers" order="11" sideWeight="0.50075644" side_tool="true" weight="0.3858785" />
+      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.5015129" side_tool="true" weight="0.43349755" />
+      <window_info anchor="bottom" id="Statistic" order="13" sideWeight="0.49924356" weight="0.31034482" />
+      <window_info anchor="bottom" id="Java Enterprise" order="14" weight="0.32840723" />
+      <window_info anchor="bottom" id="Database Changes" order="15" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="16" weight="0.25123152" />
+      <window_info anchor="bottom" id="Messages" order="17" weight="0.32512316" />
+      <window_info anchor="bottom" id="Run Dashboard" order="18" sideWeight="0.49924356" weight="0.3858785" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" sideWeight="0.49633253" weight="0.24962178" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Maven Projects" order="5" sideWeight="0.49517685" weight="0.1762481" />
+      <window_info anchor="right" id="Database" order="6" sideWeight="0.49517685" weight="0.3290469" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" sideWeight="0.49517685" weight="0.32980332" />
+      <window_info anchor="right" id="Coverage" order="10" sideWeight="0.50482315" side_tool="true" weight="0.3290469" />
+      <window_info anchor="right" id="SciView" order="11" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24583964" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32840723" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.39901477" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32840723" />
+      <window_info anchor="bottom" id="FindBugs-IDEA" order="7" weight="0.32840723" />
+      <window_info anchor="bottom" id="SBT Console" order="8" />
+      <window_info anchor="bottom" id="Spring" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32840723" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32840723" />
+      <window_info anchor="bottom" id="Statistic" order="12" />
+      <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.32840723" />
+      <window_info anchor="bottom" id="Database Changes" order="14" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="15" weight="0.32790446" />
+      <window_info anchor="bottom" id="Messages" order="16" weight="0.32840723" />
+      <window_info anchor="bottom" id="Run Dashboard" order="17" weight="0.32676518" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" sideWeight="0.49633253" weight="0.24962178" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Maven Projects" order="5" sideWeight="0.49633253" weight="0.32980332" />
+      <window_info anchor="right" id="Database" order="6" sideWeight="0.4987775" weight="0.32980332" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" sideWeight="0.4987775" weight="0.32980332" />
+      <window_info anchor="right" id="Coverage" order="10" sideWeight="0.5012225" side_tool="true" weight="0.32980332" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="1" />
+    <MESSAGE value="Distributedlockzk" />
+    <MESSAGE value="admin" />
+    <MESSAGE value="bio" />
+    <MESSAGE value="bio ExecutePool" />
+    <MESSAGE value="nio" />
+    <MESSAGE value="aio" />
+    <MESSAGE value="netty" />
+    <MESSAGE value="netty4 粘包拆包" />
+    <MESSAGE value="DelimiterBasedFrameDecoder" />
+    <MESSAGE value="FixedLengthFrameDecoder" />
+    <MESSAGE value="websocket" />
+    <MESSAGE value="udp" />
+    <MESSAGE value="udp Server" />
+    <MESSAGE value="udp client" />
+    <MESSAGE value="FileChannel" />
+    <MESSAGE value="FileServer" />
+    <MESSAGE value="netty4" />
+    <MESSAGE value="neo4j" />
+    <MESSAGE value="add interactivegraph" />
+    <MESSAGE value="add interactivegraph demo" />
+    <MESSAGE value="add sentinel" />
+    <option name="LAST_COMMIT_MESSAGE" value="add sentinel" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="scala-line">
+          <url>file://$PROJECT_DIR$/example/interactive-graph-neo4j/src/main/scala/org/interactivegraph/server/neo4j/services.scala</url>
+          <line>122</line>
+          <properties />
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="scala-line">
+          <url>file://$PROJECT_DIR$/example/interactive-graph-neo4j/src/main/scala/org/interactivegraph/server/neo4j/services.scala</url>
+          <line>136</line>
+          <properties />
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/example/interactive-graph-neo4j/src/main/webapp/examples/example2.html</url>
+          <line>34</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory">
+        <watch expression="JsonUtils.stringify(responseBody)" language="Scala" />
+      </configuration>
+      <configuration name="Application">
+        <watch expression="file.isFile()" language="JAVA" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="watch">
+      <expression>
+        <expression-string>JsonUtils.stringify(responseBody)</expression-string>
+        <language-id>Scala</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>file.isFile()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>file.getName()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>file.length()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>file</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>cs.decode(buff)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>firstMessage.toString()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>new String(firstMessage,&quot;UTF-8&quot;)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>(&quot;query time order&quot;+System.getProperty(&quot;line.separator&quot;)).equalsIgnoreCase(body)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>&quot;query time order&quot;+System.getProperty(&quot;line.separator&quot;)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="jar://$MAVEN_REPOSITORY$/com/alibaba/csp/sentinel-core/1.5.1/sentinel-core-1.5.1.jar!/com/alibaba/csp/sentinel/SphU.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-347">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/pom.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$MAVEN_REPOSITORY$/com/alibaba/csp/sentinel-core/1.5.1/sentinel-core-1.5.1.pom">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/alibaba/csp/sentinel-core/1.5.1/sentinel-core-1.5.1.jar!/com/alibaba/csp/sentinel/slots/block/RuleConstant.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/dubodemo/src/main/java/com/example/dubodemo/SecurityPermitAllConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/adminserver/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="37" column="19" lean-forward="true" selection-start-line="33" selection-start-column="20" selection-end-line="37" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-tomcat/2.1.0.RELEASE/spring-boot-starter-tomcat-2.1.0.RELEASE.pom">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/dubodemo/src/main/java/com/example/dubodemo/ServletInitializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/dubodemo/src/main/java/com/example/dubodemo/DubodemoApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/dubodemo/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="38" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/dubodemo/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1512">
+          <caret line="84" column="24" selection-start-line="84" selection-start-column="24" selection-end-line="84" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/dubodemo/src/main/java/com/example/dubodemo/SentinelDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="23" column="46" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mdesks-rpc/rpc-thrift/src/main/java/com/thrift/service/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mdesks-rpc/rpc-thrift/src/main/resources/thrift/HelloService.thrift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="19" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mdesks-rpc/rpc-thrift/src/main/java/com/thrift/invoker/NonblockingService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="18" column="90" selection-start-line="18" selection-start-column="83" selection-end-line="18" selection-end-column="99" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mdesks-rpc/rpc-thrift/src/main/java/com/thrift/service/HelloService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="30" column="24" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mdesks-rpc/rpc-thrift/src/main/resources/thrift/gen-java/com/thriftdemo/service/HelloService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="176" column="33" selection-start-line="176" selection-start-column="28" selection-end-line="176" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/thrift/libthrift/0.9.1/libthrift-0.9.1.jar!/org/apache/thrift/server/TSimpleServer.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="20" column="11" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mdesks-rpc/rpc-thrift/src/main/java/com/thrift/invoker/SimpleService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="17" column="90" selection-start-line="17" selection-start-column="81" selection-end-line="17" selection-end-column="97" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mdesks-rpc/rpc-thrift/src/main/java/com/thrift/invoker/SimpleClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mdesks-rpc/rpc-thrift/src/main/java/com/thrift/service/HelloServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.32.Final/netty-all-4.1.32.Final-sources.jar!/io/netty/handler/codec/http/websocketx/TextWebSocketFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.32.Final/netty-all-4.1.32.Final-sources.jar!/io/netty/channel/SimpleChannelInboundHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="82">
+          <caret line="114" selection-start-line="114" selection-end-line="114" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.32.Final/netty-all-4.1.32.Final-sources.jar!/io/netty/channel/AbstractChannelHandlerContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="364" selection-start-line="364" selection-end-line="364" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/es/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="39" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/io/netty/src/main/java/com/mungo/websocket/server/WebSocketHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="514">
+          <caret line="55" column="46" selection-start-line="55" selection-start-column="46" selection-end-line="55" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/io/netty/src/main/java/com/mungo/websocket/server/WebSocketServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="46" column="41" selection-start-line="46" selection-start-column="41" selection-end-line="46" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mdesks-rpc/rpc-thrift/src/main/resources/thrift/UserModel.thrift">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/distributedlock/distributedlockzk/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/distributedlock/distributedlockzk/src/main/java/com/mungo/distributedlockzk/DistributedlockzkApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/distributedlock/distributedlockzk/src/main/java/com/mungo/distributedlockzk/ZooKeeperSession.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/distributedlock/distributedlockzk/src/main/java/com/mungo/distributedlockzk/ApplicationContextHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="19" column="16" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/adminserver/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/adminserver/src/main/java/com/example/adminserver/AdminServerApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="13" column="44" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/rabbitmoproducer/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/interactive-graph-neo4j/pom.xml">
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="655">
+          <caret line="132" selection-start-line="132" selection-end-line="132" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/rabbitmoproducer/pom.xml">
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="28" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/amqp/spring-rabbit/2.1.8.RELEASE/spring-rabbit-2.1.8.RELEASE.jar!/org/springframework/amqp/rabbit/annotation/RabbitListener.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="62">
+          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/rabbitmoproducer/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" selection-start-line="1" selection-end-line="5" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/demokt/src/main/kotlin/com/example/demo/DemoApplication.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/demokt/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/demokt/pom.xml">
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="38" column="33" selection-start-line="38" selection-start-column="33" selection-end-line="38" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/demokt/src/main/kotlin/com/example/demo/SecurityPermitAllConfig.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="43" selection-start-line="2" selection-start-column="43" selection-end-line="2" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/demokt/src/main/kotlin/com/example/demo/RabbitConfig.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="505">
+          <caret line="109" column="72" selection-start-line="109" selection-start-column="72" selection-end-line="109" selection-end-column="72" />
+          <folding>
+            <element signature="e#26#551#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/demokt/src/main/kotlin/com/example/demo/MsgReceiver.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="15" lean-forward="true" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
+          <folding>
+            <element signature="e#26#233#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/amqp/spring-rabbit/2.1.8.RELEASE/spring-rabbit-2.1.8.RELEASE.jar!/org/springframework/amqp/rabbit/core/RabbitTemplate.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="549" column="65" selection-start-line="549" selection-start-column="55" selection-end-line="549" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/rabbitmoproducer/src/main/java/com/example/rabbitmoproducer/CommandLineRunnerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="20" column="27" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/rabbitmoproducer/src/main/java/com/example/rabbitmoproducer/MsgReceiver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/rabbitmoproducer/src/main/java/com/example/rabbitmoproducer/RabbitConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="59" column="31" selection-start-line="59" selection-start-column="31" selection-end-line="59" selection-end-column="31" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#3101#3102#0" expanded="true" />
+            <element signature="e#3154#3155#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/rabbitmoproducer/src/main/java/com/example/rabbitmoproducer/RabbitmoproducerApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/rabbitmoproducer/src/main/java/com/example/rabbitmoproducer/MsgProducer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="43" column="5" lean-forward="true" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>dubodemo:war</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Kotlin</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Bundled Protobuf Distribution</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>bio</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: antlr:antlr:2.7.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
