@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="dubodemo:war">
-    <output-path>$PROJECT_DIR$/example/dubodemo/target</output-path>
-    <root id="archive" name="dubodemo-0.0.1-SNAPSHOT.war">
-      <element id="artifact" artifact-name="dubodemo:war exploded" />
-    </root>
-  </artifact>
-</component>
