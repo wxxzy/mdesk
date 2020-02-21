@@ -15,7 +15,6 @@
 
     <modules>
         <module>es</module>
-        <module>demokt</module>
         <module>dubodemo</module>
         <module>interactive-graph-neo4j</module>
     </modules>
