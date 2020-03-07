@@ -1,27 +1,44 @@
 package com.chaos.queue.disruptor;
 
+import com.lmax.disruptor.BlockingWaitStrategy;
 import com.lmax.disruptor.RingBuffer;
 import com.lmax.disruptor.dsl.Disruptor;
+import com.lmax.disruptor.dsl.ProducerType;
 import com.lmax.disruptor.util.DaemonThreadFactory;
 
 import java.nio.ByteBuffer;
+import java.util.concurrent.Executor;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ThreadFactory;
 
 public class LongEventMain {
     public static void main(String[] args) throws Exception {
-        // The factory for the event
+        //
         LongEventFactory factory = new LongEventFactory();
-        // Specify the size of the ring buffer, must be power of 2.
+        Executor executor = Executors.newCachedThreadPool();
+        // 设置缓冲区大小, 必须是2的整数次幂.
         int bufferSize = 1024;
-        // Construct the Disruptor
-        Disruptor<LongEvent> disruptor = new Disruptor<>(factory, bufferSize, DaemonThreadFactory.INSTANCE);
-        // Connect the handler
-        disruptor.handleEventsWith(new LongEventHandler());
-        // Start the Disruptor, starts all threads running
+        // 构建Disruptor对象
+        Disruptor<LongEvent> disruptor = new Disruptor<LongEvent>(factory,
+                bufferSize,
+                executor,
+                ProducerType.MULTI,
+                new BlockingWaitStrategy()
+        );
+        //设置消费者
+        disruptor.handleEventsWithWorkerPool(
+                new LongEventHandler(),
+                new LongEventHandler(),
+                new LongEventHandler(),
+                new LongEventHandler(),
+                new LongEventHandler());
+        // 启动并初始化Disruptor
         disruptor.start();
-        // Get the ring buffer from the Disruptor to be used for publishing.
+
         RingBuffer<LongEvent> ringBuffer = disruptor.getRingBuffer();
         LongEventProducerWithTranslator producer = new LongEventProducerWithTranslator(ringBuffer);
         ByteBuffer bb = ByteBuffer.allocate(8);
+        //不断向生产者不断向缓冲区写入数据
         for (long l = 0; true; l++) {
             bb.putLong(0, l);
             producer.onData(bb);
