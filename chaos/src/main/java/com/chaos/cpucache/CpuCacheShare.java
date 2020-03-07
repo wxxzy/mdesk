@@ -12,7 +12,7 @@ public class CpuCacheShare {
     }
 
     private static void runTest() throws InterruptedException {
-        Thread[] threads = new Thread[4];
+        Thread[] threads = new Thread[FalseSharing.NUM_THREADS];
         for (int i = 0; i < threads.length; i++) {
             threads[i] = new Thread(new FalseSharing(i));
         }
