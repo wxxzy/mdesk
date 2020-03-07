@@ -9,6 +9,6 @@ public class LongEventHandler implements WorkHandler<LongEvent> {
 
     @Override
     public void onEvent(LongEvent longEvent) throws Exception {
-        System.out.println(Thread.currentThread().getId() + ":Event: " + longEvent.get());
+        System.out.println(Thread.currentThread().getName() + ":Event: " + longEvent.get());
     }
 }
