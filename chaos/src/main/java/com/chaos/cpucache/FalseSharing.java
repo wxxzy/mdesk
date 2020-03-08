@@ -3,7 +3,7 @@ package com.chaos.cpucache;
 public final class FalseSharing implements Runnable{
     //grep 'core id' /proc/cpuinfo | sort -u | wc -l
     public final static int NUM_THREADS = 2;
-    public final static long ITERATIONS = 500L * 100L * 100L;
+    public final static long ITERATIONS = 500L * 1000L * 1000L;
     private final int arrayIndex;
 
     public FalseSharing(final int arrayIndex){
