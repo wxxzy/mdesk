@@ -18,7 +18,7 @@ public class LongEventMain {
     public static void main(String[] args) throws Exception {
         //
         LongEventFactory factory = new LongEventFactory();
-        Executor executor = Executors.newCachedThreadPool();
+        //Executor executor = Executors.newCachedThreadPool();
         ThreadFactory threadFactory = new ThreadFactory() {
             private final AtomicInteger index = new AtomicInteger(1);
             @Override
