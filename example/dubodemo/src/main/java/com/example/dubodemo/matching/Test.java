@@ -18,8 +18,8 @@ public class Test {
             FileOutputStream fileOutputStream = new FileOutputStream(file);
             String line = null;
             while((line=reader.readLine())!=null){
-                String item[] = line.split(",");//CSV格式文件时候的分割符,我使用的是,号
-                String last = item[item.length-1];//CSV中的数据,如果有标题就不用-1
+                String item[] = line.split(",");
+                String last = item[item.length-1];
 
 
                 MatchingStrategy strategy = new ChineseStringMatcherStrtegy(item[1],item[0]);
