@@ -1,13 +1,17 @@
-package com.example.dubodemo.matching;
+package com.example.dubodemo.matching.recipe;
+
+import com.example.dubodemo.matching.ChineseStringMatcherStrtegy;
+import com.example.dubodemo.matching.Context;
+import com.example.dubodemo.matching.MatchingStrategy;
 
 import java.io.*;
 
 public class Test {
     public static void main(String[] args) {
 
-        String path = "C:\\Users\\wangxingxiang\\Desktop\\处方诊断修改.csv";
+        String path = "C:\\Users\\ww\\Desktop\\诊断修改.csv";
 
-        String savepath = "C:\\Users\\wangxingxiang\\Desktop\\处方诊断修改1.csv";
+        String savepath = "C:\\Users\\ww\\Desktop\\诊断修改1.csv";
         try {
             FileInputStream fileInputStream = new FileInputStream(path);
             File file = new File(savepath);
