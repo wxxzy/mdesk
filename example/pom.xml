@@ -17,6 +17,7 @@
         <module>es</module>
         <module>dubodemo</module>
         <module>interactive-graph-neo4j</module>
+        <module>adminserver</module>
     </modules>
 
 

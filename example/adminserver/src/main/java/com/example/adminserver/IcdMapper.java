@@ -1,0 +1,17 @@
+package com.example.adminserver;
+
+import org.apache.ibatis.jdbc.SQL;
+import org.springframework.util.StringUtils;
+
+public class IcdMapper {
+
+    public String findIcdByCode(String code){
+        SQL sql = new SQL();
+        sql.SELECT("code,codeExt,desc,level");
+        sql.FROM("icd10");
+        if(!StringUtils.isEmpty(code)){
+            sql.WHERE("code=#{code}");
+        }
+        return sql.toString();
+    }
+}
