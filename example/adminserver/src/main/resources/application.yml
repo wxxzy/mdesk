@@ -21,6 +21,16 @@ spring:
     livereload:
       enabled: true
 
+  freemarker:
+    request-context-attribute: req
+    suffix: .ftl
+    content-type: text/html
+    enabled: true
+    template-loader-path: classpath:/templates/
+    charset: utf-8
+    cache: false
+
+
   servlet:
     multipart:
       max-file-size: 50MB

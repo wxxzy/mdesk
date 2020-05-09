@@ -3,8 +3,6 @@ package com.example.adminserver;
 import org.apache.poi.ss.usermodel.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.util.StringUtils;
-
 
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -41,9 +39,7 @@ public class ExcelUtils {
                         String data = cell.getStringCellValue();
                         data = data.trim();
                         System.out.print(data);
-                        //判断data是否是数字
-//                        if (StringUtils.isNumeric(data))
-//                            list.add(Integer.parseInt(data));
+                        list.add(data);
                     }
                 }
                 System.out.println("+");

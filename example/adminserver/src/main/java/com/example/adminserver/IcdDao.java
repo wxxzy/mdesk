@@ -13,8 +13,6 @@ public interface  IcdDao {
     IcdModel findIcdByCode(String code);
 
     // 插入 并查询id 赋给传入的对象
-    @Insert("INSERT INTO icd10(code,codeext  ,level,desc) VALUES(#{code}, #{codeext}, #{level}, #{desc})")
-    @SelectKey(statement = "SELECT seq id FROM sqlite_sequence WHERE (name = 'icd10')",
-            before = false, keyProperty = "id", resultType = int.class)
+    @Insert("INSERT INTO t_icd10(code,codeext  ,level,desc) VALUES(#{code}, #{codeext}, #{level}, #{desc})")
     int insert(IcdModel model);
 }

@@ -5,7 +5,7 @@ import lombok.Data;
 @Data
 public class IcdModel {
     private String code;
-    private String codeExt;
+    private String codeext;
     private String desc;
     private String level;
 
