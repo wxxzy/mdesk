@@ -1,8 +1,8 @@
-package com.example.dubodemo.matching.recipe;
+package com.example.adminserver.automodify.recipe;
 
-import com.example.dubodemo.matching.ChineseStringMatcherStrtegy;
-import com.example.dubodemo.matching.Context;
-import com.example.dubodemo.matching.MatchingStrategy;
+import com.example.adminserver.automodify.ChineseStringMatcherStrtegy;
+import com.example.adminserver.automodify.Context;
+import com.example.adminserver.automodify.MatchingStrategy;
 
 import java.io.*;
 

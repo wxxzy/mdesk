@@ -1,4 +1,4 @@
-package com.example.dubodemo.matching;
+package com.example.adminserver.automodify;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -8,21 +8,21 @@ public class Match {
     public static void main(String[] args) {
         LOGGER.info("开始匹配");
 
-        MatchingStrategy matchingStrategy1 = new ChineseStringMatcherStrtegy("\"抑郁症;焦虑状态;帕金森病,精神分裂症\"","精神分裂症");
+        MatchingStrategy matchingStrategy1 = new ChineseStringMatcherStrtegy("\"抑郁症;焦虑状态,精神分裂症\"","精神分裂症");
         //MatchingStrategy matchingStrategy1 = new ChineseStringMatcherStrtegy("精神分裂症","\"抑郁症;焦虑状态;帕金森病,精神分裂症\"");
         Context context = new Context(matchingStrategy1);
         context.executeStrategy();
 
         System.out.println(((ChineseStringMatcherStrtegy) matchingStrategy1).sim());
 
-        MatchingStrategy matchingStrategy = new SimilarityStrategy("支","支气管炎");
+        /*MatchingStrategy matchingStrategy = new SimilarityStrategy("\"抑郁症;焦虑状态,精神分裂症\"","精神分裂症");
 
         context.changeStrategy(matchingStrategy);
-        context.executeStrategy();
+        context.executeStrategy();*/
 
-        MatchingStrategy strategy = new CosineSimilarityStrategy("支","支气管炎");
+        /*MatchingStrategy strategy = new CosineSimilarityStrategy("支","支气管炎");
         context.changeStrategy(strategy);
         context.executeStrategy();
-        System.out.print(((CosineSimilarityStrategy) strategy).sim());
+        System.out.print(((CosineSimilarityStrategy) strategy).sim());*/
     }
 }
