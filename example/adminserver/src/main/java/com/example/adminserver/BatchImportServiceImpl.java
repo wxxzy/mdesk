@@ -108,9 +108,9 @@ public class BatchImportServiceImpl implements BatchImportService {
                 if (null != cell){
                     if(c==0){
                         icd10.setCode(cell.getStringCellValue());
-                    }else if(c==1){
+                    } /*else if(c==1){
                         icd10.setCodeext(cell.getStringCellValue());
-                    }else if(c==2){
+                    } */else if(c==1){
                         icd10.setDesc(cell.getStringCellValue());
                     }
                     icd10.setLevel("4");
