@@ -1,4 +1,4 @@
-package com.example.adminserver;
+package com.example.adminserver.dao;
 
 import lombok.Data;
 

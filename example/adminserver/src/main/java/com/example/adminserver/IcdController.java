@@ -1,5 +1,7 @@
 package com.example.adminserver;
 
+import com.example.adminserver.dao.IcdModel;
+import com.example.adminserver.service.IcdService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

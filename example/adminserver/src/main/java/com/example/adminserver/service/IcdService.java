@@ -1,5 +1,7 @@
-package com.example.adminserver;
+package com.example.adminserver.service;
 
+import com.example.adminserver.dao.IcdDao;
+import com.example.adminserver.dao.IcdModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

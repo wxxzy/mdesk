@@ -1,4 +1,4 @@
-package com.example.adminserver;
+package com.example.adminserver.service;
 
 import org.springframework.web.multipart.MultipartFile;
 

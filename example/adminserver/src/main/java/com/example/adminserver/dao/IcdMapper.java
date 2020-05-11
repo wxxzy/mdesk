@@ -1,4 +1,4 @@
-package com.example.adminserver;
+package com.example.adminserver.dao;
 
 import org.apache.ibatis.jdbc.SQL;
 import org.springframework.util.StringUtils;
