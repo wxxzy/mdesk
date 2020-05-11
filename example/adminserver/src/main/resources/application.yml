@@ -4,19 +4,16 @@ server:
 userName: ffsfd
 bookTitle: wwww
 
+logging:
+  level:
+    com.example.adminserver: debug
+
 spring:
   datasource:
     driver-class-name: org.sqlite.JDBC
     url: jdbc:sqlite:D:\\data\\sqlite\\db.db
     username:
     password:
-  jpa:
-    database-platform: info.jesseyang.config.SQLiteDialect
-    hibernate:
-      ddl-auto: update
-    show-sql: true
-  thymeleaf:
-    cache: false
   devtools:
     livereload:
       enabled: true

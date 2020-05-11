@@ -14,4 +14,11 @@ public class IcdMapper {
         }
         return sql.toString();
     }
+
+    public String findAll(){
+        SQL sql = new SQL();
+        sql.SELECT("code,codeExt,desc,level");
+        sql.FROM("t_icd10");
+        return sql.toString();
+    }
 }
