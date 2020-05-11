@@ -1,0 +1,38 @@
+server:
+  port: 9000
+
+userName: ffsfd
+bookTitle: wwww
+
+spring:
+  datasource:
+    driver-class-name: org.sqlite.JDBC
+    url: jdbc:sqlite:D:\\data\\sqlite\\db.db
+    username:
+    password:
+  jpa:
+    database-platform: info.jesseyang.config.SQLiteDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  thymeleaf:
+    cache: false
+  devtools:
+    livereload:
+      enabled: true
+
+  freemarker:
+    request-context-attribute: req
+    suffix: .ftl
+    content-type: text/html
+    enabled: true
+    template-loader-path: classpath:/templates/
+    charset: utf-8
+    cache: false
+
+
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 50MB
+
