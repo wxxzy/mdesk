@@ -6,6 +6,7 @@ import java.io.Serializable;
 
 @Data
 public class IcdModel implements Serializable {
+    private Long id;
     private String code;
     private String codeext;
     private String desc;
