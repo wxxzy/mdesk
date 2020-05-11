@@ -23,11 +23,11 @@ public class DubodemoApplication {
         SpringApplication.run(DubodemoApplication.class, args);
     }
 
-    @Scheduled(fixedRate = 1000)
+    /*@Scheduled(fixedRate = 1000)
     public void doInsert(){
         Random random = new Random();
         InfluxDBDemo.insert(random.nextInt(1000));
-    }
+    }*/
 
     @RestController
     public class TestController {
