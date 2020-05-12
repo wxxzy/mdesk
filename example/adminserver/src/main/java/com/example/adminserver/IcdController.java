@@ -5,6 +5,8 @@ import com.example.adminserver.automodify.ChineseStringMatcherStrtegy;
 import com.example.adminserver.automodify.Context;
 import com.example.adminserver.automodify.MatchingStrategy;
 import com.example.adminserver.dao.IcdModel;
+import com.example.adminserver.dao.ManualDiagnoseDao;
+import com.example.adminserver.dao.ManualDiagnoseModel;
 import com.example.adminserver.dao.MatchModel;
 import com.example.adminserver.service.IcdService;
 import com.example.adminserver.service.MatchService;
@@ -18,7 +20,9 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @RestController
 @RequestMapping(value = "/icd")
@@ -28,6 +32,10 @@ public class IcdController {
     private IcdService icdService;
     @Autowired
     private MatchService matchService;
+    @Autowired
+    private ManualDiagnoseDao manualDiagnoseDao;
+
+    final String filePath = "D:\\workspaces\\java\\mdesks\\example\\adminserver\\src\\main\\resources\\recipe.csv";
 
     @GetMapping(value = "/findIcdByCode")
     public IcdModel findIcdByCode(String code){
@@ -41,8 +49,6 @@ public class IcdController {
 
     @GetMapping(value = "/match")
     public String match(){
-        String filePath = "D:\\workspaces\\java\\mdesks\\example\\adminserver\\src\\main\\resources\\recipe.csv";
-
         //System.out.println(((ChineseStringMatcherStrtegy) matchingStrategy1).sim());
         try {
             File file =new File(filePath);
@@ -93,5 +99,29 @@ public class IcdController {
             e.printStackTrace();
         }
         return "";
+    }
+
+    @GetMapping(value = "/manual")
+    public String manual(){
+        try {
+            File file =new File(filePath);
+            InputStreamReader isr=new InputStreamReader(new FileInputStream(file),"utf-8");
+            CsvReader csvReader = new CsvReader(isr);
+            csvReader.setSafetySwitch(false);
+            csvReader.readHeaders();
+            Set<String> manual = new HashSet<>();
+            while (csvReader.readRecord()) {
+                manual.add(csvReader.get("after"));
+            }
+            for (String str : manual){
+                ManualDiagnoseModel manualDiagnoseModel = new ManualDiagnoseModel();
+                manualDiagnoseModel.setDiagnose(str);
+                manualDiagnoseDao.insert(manualDiagnoseModel);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return "success";
     }
 }
