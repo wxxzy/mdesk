@@ -14,7 +14,6 @@ public class ManualService {
     @Autowired
     private ManualDiagnoseDao manualDiagnoseDao;
 
-
     public void insert(ManualDiagnoseModel manualDiagnoseModel){
         manualDiagnoseDao.insert(manualDiagnoseModel);
     }
