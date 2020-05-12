@@ -145,31 +145,31 @@ public class ChineseStringMatcherStrtegy implements MatchingStrategy {
 
     @Override
     public void execute() {
-        System.out.println(" - - - - Start - - - - ");
-        System.out.printf("%-8s%8s\n","原串：",originString);
-        System.out.printf("%-8s%8s\n","目标串：",matchString);
-
-        System.out.println();
-        System.out.printf("%-16s\n","匹配结果："
-                + "");
-        for(int i=0;i<mtc.length;i++)
-        {
-            System.out.printf("%2c",mtc[i]);
-        }
-        System.out.println();
-        for(int i=0;i<mtc.length;i++) {
-            System.out.printf("%2c",indicator[i]==0?MATCH:MISMATCH);
-        }
-        System.out.println();
-
-        System.out.printf("匹配率：%.2f%%\n",matchingRate);
-        System.out.printf("准确率：%.2f%%\n",accuracyRate);
-        System.out.println();
-        if(absent != 0)
-            System.out.printf("\n比原串少%d个字\n",absent);
-        if(excess != 0)
-            System.out.printf("\n比原串多%d个字\n",excess);
-        System.out.println(" - - - - Start - - - - ");
+//        System.out.println(" - - - - Start - - - - ");
+//        System.out.printf("%-8s%8s\n","原串：",originString);
+//        System.out.printf("%-8s%8s\n","目标串：",matchString);
+//
+//        System.out.println();
+//        System.out.printf("%-16s\n","匹配结果："
+//                + "");
+//        for(int i=0;i<mtc.length;i++)
+//        {
+//            System.out.printf("%2c",mtc[i]);
+//        }
+//        System.out.println();
+//        for(int i=0;i<mtc.length;i++) {
+//            System.out.printf("%2c",indicator[i]==0?MATCH:MISMATCH);
+//        }
+//        System.out.println();
+//
+//        System.out.printf("匹配率：%.2f%%\n",matchingRate);
+//        System.out.printf("准确率：%.2f%%\n",accuracyRate);
+//        System.out.println();
+//        if(absent != 0)
+//            System.out.printf("\n比原串少%d个字\n",absent);
+//        if(excess != 0)
+//            System.out.printf("\n比原串多%d个字\n",excess);
+//        System.out.println(" - - - - Start - - - - ");
 
     }
 }

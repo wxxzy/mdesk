@@ -10,7 +10,9 @@ public class MatchModel implements Serializable {
     private String oldDiagnosis;
     private String newDiagnosis;
     private String icd10;
+    private String manual;
     private double score;
+    private double manualScore;
 
 
 }

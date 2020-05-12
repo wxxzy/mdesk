@@ -15,6 +15,7 @@ public interface MatchDao {
     List<MatchModel> findAll();
 
     // 插入 并查询id 赋给传入的对象
-    @Insert("INSERT INTO t_match(old_diagnosis,new_diagnosis  ,icd10,score) VALUES(#{oldDiagnosis}, #{newDiagnosis}, #{icd10}, #{score})")
+    @Insert("INSERT INTO t_match(old_diagnosis,new_diagnosis  ,icd10,score,manual,manual_score) " +
+            "VALUES(#{oldDiagnosis}, #{newDiagnosis}, #{icd10}, #{score},#{manual},#{manualScore})")
     int insert(MatchModel model);
 }
