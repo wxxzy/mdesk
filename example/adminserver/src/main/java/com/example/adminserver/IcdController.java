@@ -18,9 +18,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 @RestController
 @RequestMapping(value = "/icd")
@@ -143,35 +141,33 @@ public class IcdController {
             List<IcdModel> list4 = icdService.findIcdByLevel("4");
             List<IcdModel> list6 = icdService.findIcdByLevel("6");
 
+            List<String> match = new ArrayList<>();
+
 
             double count = 16147.0;
 
             double index =1;
             // 读内容
-            /*while (csvReader.readRecord()) {
+            while (csvReader.readRecord()) {
                 log.info("第"+index+"条"+"，共"+count+"条"+",完成"+(index/count)*100+"%");
+                String[] befer = new String[list3.size()];
+                Arrays.fill(befer, csvReader.get("befer"));
 
-                //for (IcdModel icdModel : list){
-                    *//*MatchingStrategy matchingStrategy1 = new ChineseStringMatcherStrtegy(csvReader.get("befer"),icdModel.getDesc());
-                    Context context = new Context(matchingStrategy1);
-                    ((ChineseStringMatcherStrtegy) matchingStrategy1).setMatchString(icdModel.getDesc());
-                    context.changeStrategy(matchingStrategy1);
-                    context.executeStrategy();
+                /*for (IcdModel icdModel : list3){
 
-                    double score = ((ChineseStringMatcherStrtegy) matchingStrategy1).sim();*//*
-
-                    *//*MatchSimnetBowModel matchModel = new MatchSimnetBowModel();
+                    MatchSimnetBowModel matchModel = new MatchSimnetBowModel();
                     matchModel.setOldDiagnosis(csvReader.get("befer"));
                     matchModel.setNewDiagnosis(icdModel.getDesc());
                     matchModel.setIcd10(icdModel.getCode());
                     matchModel.setScore(score);
                     matchModel.setManual(csvReader.get("after"));
                     matchModel.setManualScore(Double.valueOf(csvReader.get("score")));
-                    matchSimnetBowService.insert(matchModel);*//*
-                //}
+                    matchSimnetBowService.insert(matchModel);
+                }*/
 
                 index++;
-            }*/
+            }
+
         } catch (IOException e) {
             e.printStackTrace();
         }
