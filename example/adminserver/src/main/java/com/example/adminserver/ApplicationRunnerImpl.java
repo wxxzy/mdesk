@@ -19,5 +19,8 @@ public class ApplicationRunnerImpl implements ApplicationRunner {
         }
         System.out.println();
         icdService.findAll();
+        icdService.findIcdByLevel("3");
+        icdService.findIcdByLevel("4");
+        icdService.findIcdByLevel("6");
     }
 }

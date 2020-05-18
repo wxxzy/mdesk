@@ -6,7 +6,7 @@ bookTitle: wwww
 
 logging:
   level:
-    com.example.adminserver: debug
+    com.example.adminserver: info
 
 spring:
   datasource:

@@ -4,12 +4,10 @@ import com.csvreader.CsvReader;
 import com.example.adminserver.automodify.ChineseStringMatcherStrtegy;
 import com.example.adminserver.automodify.Context;
 import com.example.adminserver.automodify.MatchingStrategy;
-import com.example.adminserver.dao.IcdModel;
-import com.example.adminserver.dao.ManualDiagnoseDao;
-import com.example.adminserver.dao.ManualDiagnoseModel;
-import com.example.adminserver.dao.MatchModel;
+import com.example.adminserver.dao.*;
 import com.example.adminserver.service.IcdService;
 import com.example.adminserver.service.MatchService;
+import com.example.adminserver.service.MatchSimnetBowService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -34,6 +32,8 @@ public class IcdController {
     private MatchService matchService;
     @Autowired
     private ManualDiagnoseDao manualDiagnoseDao;
+    @Autowired
+    private MatchSimnetBowService matchSimnetBowService;
 
     final String filePath = "D:\\workspaces\\java\\mdesks\\example\\adminserver\\src\\main\\resources\\recipe.csv";
 
@@ -47,6 +47,7 @@ public class IcdController {
         return icdService.findAll();
     }
 
+    //数据数据与ICD10匹配结果
     @GetMapping(value = "/match")
     public String match(){
         //System.out.println(((ChineseStringMatcherStrtegy) matchingStrategy1).sim());
@@ -101,6 +102,7 @@ public class IcdController {
         return "";
     }
 
+    //人工匹配数据
     @GetMapping(value = "/manual")
     public String manual(){
         try {
@@ -123,5 +125,56 @@ public class IcdController {
         }
 
         return "success";
+    }
+
+    //数据数据与ICD10匹配结果
+    @GetMapping(value = "/simnet")
+    public String simnet(){
+        try {
+            File file =new File(filePath);
+            InputStreamReader isr=new InputStreamReader(new FileInputStream(file),"utf-8");
+            CsvReader csvReader = new CsvReader(isr);
+            csvReader.setSafetySwitch(false);
+            // 读表头
+            csvReader.readHeaders();
+
+            //List<IcdModel> list = icdService.findAll();
+            List<IcdModel> list3 = icdService.findIcdByLevel("3");
+            List<IcdModel> list4 = icdService.findIcdByLevel("4");
+            List<IcdModel> list6 = icdService.findIcdByLevel("6");
+
+
+            double count = 16147.0;
+
+            double index =1;
+            // 读内容
+            /*while (csvReader.readRecord()) {
+                log.info("第"+index+"条"+"，共"+count+"条"+",完成"+(index/count)*100+"%");
+
+                //for (IcdModel icdModel : list){
+                    *//*MatchingStrategy matchingStrategy1 = new ChineseStringMatcherStrtegy(csvReader.get("befer"),icdModel.getDesc());
+                    Context context = new Context(matchingStrategy1);
+                    ((ChineseStringMatcherStrtegy) matchingStrategy1).setMatchString(icdModel.getDesc());
+                    context.changeStrategy(matchingStrategy1);
+                    context.executeStrategy();
+
+                    double score = ((ChineseStringMatcherStrtegy) matchingStrategy1).sim();*//*
+
+                    *//*MatchSimnetBowModel matchModel = new MatchSimnetBowModel();
+                    matchModel.setOldDiagnosis(csvReader.get("befer"));
+                    matchModel.setNewDiagnosis(icdModel.getDesc());
+                    matchModel.setIcd10(icdModel.getCode());
+                    matchModel.setScore(score);
+                    matchModel.setManual(csvReader.get("after"));
+                    matchModel.setManualScore(Double.valueOf(csvReader.get("score")));
+                    matchSimnetBowService.insert(matchModel);*//*
+                //}
+
+                index++;
+            }*/
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return "";
     }
 }
