@@ -16,6 +16,9 @@ public interface  IcdDao {
     @SelectProvider(type = IcdMapper.class,method = "findIcdByLevel")
     List<IcdModel> findIcdByLevel(String level);
 
+    @SelectProvider(type = IcdMapper.class,method = "findIcdByLevelStr")
+    List<String> findIcdByLevelStr(String level);
+
     @SelectProvider(type = IcdMapper.class,method = "findAll")
     List<IcdModel> findAll();
 

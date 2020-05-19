@@ -25,6 +25,16 @@ public class IcdMapper {
         return sql.toString();
     }
 
+    public String findIcdByLevelStr(String level){
+        SQL sql = new SQL();
+        sql.SELECT("desc");
+        sql.FROM("t_icd10");
+        if(!StringUtils.isEmpty(level)){
+            sql.WHERE("level=#{level}");
+        }
+        return sql.toString();
+    }
+
     public String findAll(){
         SQL sql = new SQL();
         sql.SELECT("code,codeExt,desc,level");

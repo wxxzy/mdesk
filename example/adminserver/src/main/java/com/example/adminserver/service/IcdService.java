@@ -26,4 +26,9 @@ public class IcdService {
     public List<IcdModel> findIcdByLevel(String level){
         return icdDao.findIcdByLevel(level);
     }
+
+    @Cacheable(cacheNames = {"findIcdByLevelStr"})
+    public List<String> findIcdByLevelStr(String level){
+        return icdDao.findIcdByLevelStr(level);
+    }
 }

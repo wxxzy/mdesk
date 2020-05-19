@@ -22,5 +22,9 @@ public class ApplicationRunnerImpl implements ApplicationRunner {
         icdService.findIcdByLevel("3");
         icdService.findIcdByLevel("4");
         icdService.findIcdByLevel("6");
+
+        icdService.findIcdByLevelStr("3");
+        icdService.findIcdByLevelStr("4");
+        icdService.findIcdByLevelStr("6");
     }
 }
