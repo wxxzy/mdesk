@@ -13,6 +13,7 @@ import com.example.adminserver.utils.HttpUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.collections4.map.HashedMap;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -108,6 +109,7 @@ public class IcdController {
     //人工匹配数据
     @GetMapping(value = "/manual")
     public String manual(){
+        int index = 1;
         try {
             File file =new File(filePath);
             InputStreamReader isr=new InputStreamReader(new FileInputStream(file),"utf-8");
@@ -116,7 +118,14 @@ public class IcdController {
             csvReader.readHeaders();
             Set<String> manual = new HashSet<>();
             while (csvReader.readRecord()) {
-                manual.add(csvReader.get("after"));
+                String[] split = csvReader.get("after").split("\\;|\\ |\\,|\\；|\\，|\\、|\\；|\\‘|\\’|\\，|\\：|\\\\.|\\。");
+                for (String s : split){
+                    if(!StringUtils.isEmpty(s)){
+                        manual.add(s);
+                    }
+                }
+
+                index ++;
             }
             for (String str : manual){
                 ManualDiagnoseModel manualDiagnoseModel = new ManualDiagnoseModel();
@@ -127,7 +136,7 @@ public class IcdController {
             e.printStackTrace();
         }
 
-        return "success";
+        return "success:" +index;
     }
 
     //数据数据与ICD10匹配结果
@@ -161,7 +170,7 @@ public class IcdController {
             double count = 16147.0;
 
             double index =1;
-            String[] befer = new String[list3.size()];
+            String[] befer = new String[liststr6.size()];
             // 读内容
             while (csvReader.readRecord()) {
                 //log.info("第"+index+"条"+"，共"+count+"条"+",完成"+(index/count)*100+"%");
@@ -181,13 +190,15 @@ public class IcdController {
 
                 index++;
             }
-            Object texts[][]  = { befer, liststr3.toArray()};
+            Object texts[][]  = { befer, liststr6.toArray()};
             parm.put("texts",texts);
-            System.out.println((new JSONObject(parm)).toJSONString());
-            result = httpUtils.doPost("http://10.6.56.35:8866/predict/simnet_bow", new JSONObject(parm),5000);
-            System.out.println(result);
+            log.debug((new JSONObject(parm)).toJSONString());
+            result = httpUtils.doPost("http://10.6.56.35:8866/predict/simnet_bow", new JSONObject(parm),100000);
+            log.info(result);
+            JSONObject json = (JSONObject) JSONObject.parse(result);
         } catch (IOException e) {
             e.printStackTrace();
+            return e.getMessage();
         }
         return result;
     }

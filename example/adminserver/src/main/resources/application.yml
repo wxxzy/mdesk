@@ -5,6 +5,7 @@ userName: ffsfd
 bookTitle: wwww
 
 logging:
+  file: /app/logs/mdesk.log
   level:
     com.example.adminserver: info
 
