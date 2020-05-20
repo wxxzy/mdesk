@@ -1,5 +1,6 @@
 package com.example.adminserver;
 
+import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.csvreader.CsvReader;
 import com.example.adminserver.automodify.ChineseStringMatcherStrtegy;
@@ -39,7 +40,8 @@ public class IcdController {
     @Autowired
     private HttpUtils httpUtils;
 
-    final String filePath = "D:\\workspaces\\java\\mdesks\\example\\adminserver\\src\\main\\resources\\recipe.csv";
+    final String dir = "D:\\data\\";
+    final String filePath = "recipe.csv";
 
     @GetMapping(value = "/findIcdByCode")
     public IcdModel findIcdByCode(String code){
@@ -141,10 +143,16 @@ public class IcdController {
 
     //数据数据与ICD10匹配结果
     @GetMapping(value = "/simnet")
-    public String simnet(){
-        String result = "";
+    public String simnet(String level){
+        String result = "success";
+        if(StringUtils.isEmpty(level)){
+            return "level不能为空，且只能为3,4,6";
+        }
+        if(!"346".contains(level)){
+            return "level只能为3,4,6";
+        }
         try {
-            File file =new File(filePath);
+            File file =new File(dir+filePath);
             InputStreamReader isr=new InputStreamReader(new FileInputStream(file),"utf-8");
             CsvReader csvReader = new CsvReader(isr);
             csvReader.setSafetySwitch(false);
@@ -152,50 +160,47 @@ public class IcdController {
             csvReader.readHeaders();
 
             //List<IcdModel> list = icdService.findAll();
-            List<IcdModel> list3 = icdService.findIcdByLevel("3");
-            List<IcdModel> list4 = icdService.findIcdByLevel("4");
-            List<IcdModel> list6 = icdService.findIcdByLevel("6");
+            List<IcdModel> list = icdService.findIcdByLevel(level);
+            List<String> liststr = icdService.findIcdByLevelStr(level);
 
-            List<String> liststr3 = icdService.findIcdByLevelStr("3");
-            List<String> liststr4 = icdService.findIcdByLevelStr("4");
-            List<String> liststr6 = icdService.findIcdByLevelStr("6");
-
-            List<String> match = new ArrayList<>();
             Map<String,Object> parm = new HashedMap<>();
 
             parm.put("use_gpu",true);
             parm.put("batch_size",1);
 
-
-            double count = 16147.0;
-
-            double index =1;
-            String[] befer = new String[liststr6.size()];
+            String[] befer = new String[liststr.size()];
+            String[] after = new String[liststr.size()];
+            String[] score = new String[liststr.size()];
             // 读内容
             while (csvReader.readRecord()) {
                 //log.info("第"+index+"条"+"，共"+count+"条"+",完成"+(index/count)*100+"%");
-
                 Arrays.fill(befer, csvReader.get("befer"));
-
-                /*for (IcdModel icdModel : list3){
-                    MatchSimnetBowModel matchModel = new MatchSimnetBowModel();
-                    matchModel.setOldDiagnosis(csvReader.get("befer"));
-                    matchModel.setNewDiagnosis(icdModel.getDesc());
-                    matchModel.setIcd10(icdModel.getCode());
-                    matchModel.setScore(score);
-                    matchModel.setManual(csvReader.get("after"));
-                    matchModel.setManualScore(Double.valueOf(csvReader.get("score")));
-                    matchSimnetBowService.insert(matchModel);
-                }*/
-
-                index++;
+                Arrays.fill(after, csvReader.get("after"));
+                Arrays.fill(score, csvReader.get("score"));
+                //匹配参数
+                Object texts[][]  = { befer, liststr.toArray()};
+                parm.put("texts",texts);
+                log.debug((new JSONObject(parm)).toJSONString());
+                String resp = httpUtils.doPost("http://10.6.56.35:8866/predict/simnet_bow", new JSONObject(parm),100000);
+                //log.info(resp);
+                JSONObject json = (JSONObject) JSONObject.parse(resp);
+                JSONArray array  = (JSONArray) json.get("results");
+                for (int i = 0; i < array.size(); i++) {
+                    JSONObject j = (JSONObject) array.get(i);
+                    if(j.getLong("similarity") >= 0.8) {
+                        log.info(j.toJSONString());
+                        MatchSimnetBowModel matchModel = new MatchSimnetBowModel();
+                        matchModel.setOldDiagnosis(j.getString("text_1"));
+                        matchModel.setNewDiagnosis(j.getString("text_2"));
+                        matchModel.setScore(j.getLong("similarity"));
+                        IcdModel icdModel = list.get(i);
+                        matchModel.setIcd10(icdModel.getCode());
+                        matchModel.setManual(after[i]);
+                        matchModel.setManualScore(Double.valueOf(score[i]));
+                        matchSimnetBowService.insert(matchModel);
+                    }
+                }
             }
-            Object texts[][]  = { befer, liststr6.toArray()};
-            parm.put("texts",texts);
-            log.debug((new JSONObject(parm)).toJSONString());
-            result = httpUtils.doPost("http://10.6.56.35:8866/predict/simnet_bow", new JSONObject(parm),100000);
-            log.info(result);
-            JSONObject json = (JSONObject) JSONObject.parse(result);
         } catch (IOException e) {
             e.printStackTrace();
             return e.getMessage();
