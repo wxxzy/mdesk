@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <!-- 日志文件输出设置 -->
+    <property name="LOG_FILE" value="/app/logs/mdesk.%d{yyyy-MM-dd}"/>
+
+    <!-- 控制台输出 （可选项） -->
+    <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] [%X{requestId}] %-5level %logger{50} [%line] - %msg%n
+            </pattern>
+        </encoder>
+    </appender>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <!--encoder 默认配置为PatternLayoutEncoder-->
+        <encoder>
+            <!--<pattern>${CONSOLE_LOG_PATTERN}</pattern>-->
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level --- [%thread] %logger Line:%-3L - %msg%n</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+        <!--此日志appender是为开发使用，只配置最底级别，控制台输出的日志级别是大于或等于此级别的日志信息-->
+        <filter class="com.example.adminserver.log.LogFilter"></filter>
+    </appender>
+
+    <!-- 定义logger -->
+    <root level="info">
+        <!-- 控制台输出 （可选项） -->
+        <appender-ref ref="STDOUT"/>
+    </root>
+</configuration>
