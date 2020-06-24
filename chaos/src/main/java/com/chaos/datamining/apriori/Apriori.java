@@ -1,4 +1,4 @@
-package com.chaos.datamining;
+package com.chaos.datamining.apriori;
 
 import java.util.*;
 
