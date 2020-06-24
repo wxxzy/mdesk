@@ -210,9 +210,10 @@ public class FPTree {
 
     public static void main(String[] args) {
         FPTree fptree = new FPTree();
-        fptree.setMinSuport(3);
+        fptree.setMinSuport(1);
         List<List<String>> transRecords = fptree
-                .readTransRocords("D:\\workspaces\\java\\mdesks\\chaos\\src\\main\\java\\com\\chaos\\datamining\\fpgrowth\\foods.txt");
+                .readTransRocords("D:\\workspaces\\java\\mdesks\\chaos\\src\\main\\java\\com\\chaos\\datamining\\fpgrowth\\disease.txt");
         fptree.FPGrowth(transRecords, null);
+        System.out.println("");
     }
 }
