@@ -1,0 +1,44 @@
+@startuml
+start
+
+fork
+:用户提交问诊;
+:分诊系统;
+fork again
+:医生上线接诊;
+detach
+end fork
+:分配到诊单|
+partition 问诊基本信息查询 {
+    :查询病历模板列表 |
+    :查询患者就诊记录|
+    :查询患者电子病历记录|
+    :查询患者处方记录|
+}
+while (问诊进行中?) is (病情沟通)
+fork
+:IM系统 |
+fork again
+if (聊天信息填入病历) then (yes)
+:聊天信息填入病历 <
+elseif (病历模板选择) then (yes)
+:病历模板选择 <
+elseif (病历字段模板选择) then (yes)
+:病历字段模板选择 <
+endif
+:主诉快捷输入 <
+:过敏史字典选择 <
+:ICD10诊断选择 <
+
+:病历保存;
+
+:开具处方|
+
+detach
+end fork
+
+endwhile (结束问诊)
+
+stop
+
+@enduml
