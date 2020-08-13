@@ -32,13 +32,36 @@ endif
 
 :病历保存;
 
-:开具处方|
+:开处方操作 >
+:ICD10诊断选择 <
+if (处方模板选择) then (yes)
+:处方模板选择 <
+elseif (药品搜索) then (yes)
+while (药品搜索) is (药品数量小于5？)
+:添加药品 <
+:填写用法用量 <
+:药品数量填写 <
+endwhile (药品数量大于5)
+endif
+partition 处方检查 {
+:药品配伍禁忌检查 <
+:药品缺货检查 <
+}
+:开具处方;
+:CA签章 |
 
-detach
 end fork
+endwhile (病历处方填写完成)
 
-endwhile (结束问诊)
+:药师审方 |
+note right
+审方目前为自动审核
+end note
 
+:处方推送至用户;
+:用户凭处方购药;
+note right
+后续为诊后流程
+end note
 stop
-
 @enduml
