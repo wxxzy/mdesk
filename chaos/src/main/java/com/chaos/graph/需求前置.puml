@@ -1,11 +1,26 @@
 @startuml
 actor 用户
-skinparam sequenceMessageAlign center
+skinParam sequenceMessageAlign center
+
+
 
 用户 -> 订单系统: 提交订单
 
+'box "Internal Service" #LightBlue
+'participant 订单完成页
+'participant 问诊系统
+'end box
+
+订单系统 -> 订单完成页: 订单信息
 订单系统 -> 问诊系统: 补处方请求
 问诊系统 --> 订单系统: 处方id
+
+== 病历信息补充（本期新增） ==
+
+订单完成页->中台:疾病症状信息
+用户 -> 问诊系统: 提交病历信息，症状和时间
+== 病历信息补充 ==
+
 问诊系统 -> 处方分诊: 补问诊信息（灰度80%）
 问诊系统 -> 处方分诊: 补处方信息
 loop 10 分钟
@@ -18,7 +33,7 @@ note left
 处方会重新分配医生审核
 end note
 医生工作台 -> 医生: 处方信息
-医生 --> 订单系统: 处方审核通过
+医生 --> 订单系统: 处方审核通过，<font color=red>病历提交</font>
 订单系统 ->仓库: 订单流转
 仓库 --> 用户: 发货
 医生 --[#0000FF]> 订单系统: 处方审核拒绝
