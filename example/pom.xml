@@ -19,6 +19,9 @@
         <module>interactive-graph-neo4j</module>
         <module>adminserver</module>
         <module>websocket</module>
+        <module>mdesks-rpc</module>
+        <module>io</module>
+        <module>chaos</module>
     </modules>
 
 
