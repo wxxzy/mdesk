@@ -5,42 +5,33 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <properties>
-        <!-- Test libs -->
-        <junit_version>4.12</junit_version>
-        <hazelcast_version>3.9-EA</hazelcast_version>
-        <hamcrest_version>1.3</hamcrest_version>
-        <hibernate_validator_version>5.2.4.Final</hibernate_validator_version>
-        <el_api_version>2.2.4</el_api_version>
-        <jaxb_api_version>2.2.7</jaxb_api_version>
-        <cglib_version>2.2</cglib_version>
-        <mockito_version>2.18.3</mockito_version>
-        <!-- Build args -->
-        <argline>-server -Xms256m -Xmx512m -XX:PermSize=64m -XX:MaxPermSize=128m -Dfile.encoding=UTF-8
-            -Djava.net.preferIPv4Stack=true
-        </argline>
-        <skip_maven_deploy>false</skip_maven_deploy>
-        <updateReleaseInfo>true</updateReleaseInfo>
-        <project.build.sourceEncoding>${file_encoding}</project.build.sourceEncoding>
-
-        <profile.name>oss</profile.name>
-        <!-- for maven compiler plugin -->
-        <java_source_version>1.8</java_source_version>
-        <java_target_version>1.8</java_target_version>
-        <file_encoding>UTF-8</file_encoding>
-        <!-- Maven plugins -->
-        <maven_jar_version>3.0.2</maven_jar_version>
-        <maven_surefire_version>2.19.1</maven_surefire_version>
-        <maven_deploy_version>2.8.2</maven_deploy_version>
-        <maven_compiler_version>3.6.0</maven_compiler_version>
-        <maven_source_version>3.0.1</maven_source_version>
-        <maven_javadoc_version>3.0.1</maven_javadoc_version>
-        <maven_jetty_version>9.4.11.v20180605</maven_jetty_version>
-        <maven_checkstyle_version>3.0.0</maven_checkstyle_version>
-        <maven_jacoco_version>0.8.2</maven_jacoco_version>
-        <apache-rat-plugin.version>0.12</apache-rat-plugin.version>
-        <arguments />
-        <checkstyle.skip>true</checkstyle.skip>
-        <rat.skip>true</rat.skip>
+        <!--mdesk-->
+        <spring-boot.version>2.3.2.RELEASE</spring-boot.version>
+        <spring-cloud.version>Hoxton.SR6</spring-cloud.version>
+        <spring-cloud-alibaba.version>2.2.1.RELEASE</spring-cloud-alibaba.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <git.commit.plugin>2.2.5</git.commit.plugin>
+        <spring.checkstyle.plugin>0.0.22</spring.checkstyle.plugin>
+        <spring-boot-admin.version>2.2.4</spring-boot-admin.version>
+        <hutool.version>5.3.10</hutool.version>
+        <mybatis-plus.version>3.3.2</mybatis-plus.version>
+        <dynamic-ds.version>3.0.0</dynamic-ds.version>
+        <captcha.version>2.0.0</captcha.version>
+        <velocity.version>1.7</velocity.version>
+        <jasypt.version>2.1.0</jasypt.version>
+        <fastjson.version>1.2.73</fastjson.version>
+        <swagger.fox.version>2.9.2</swagger.fox.version>
+        <swagger.core.version>1.5.24</swagger.core.version>
+        <security.oauth.version>2.3.6.RELEASE</security.oauth.version>
+        <docker.plugin.version>0.32.0</docker.plugin.version>
+        <docker.host>http://172.17.0.111:2375</docker.host>
+        <docker.registry>172.17.0.111</docker.registry>
+        <docker.namespace>library</docker.namespace>
+        <docker.username>admin</docker.username>
+        <docker.password>Harbor12345</docker.password>
+        <!--mdesk-->
     </properties>
 
     <modules>
@@ -50,308 +41,200 @@
 
     <dependencyManagement>
         <dependencies>
-
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!--spring cloud alibaba-->
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${spring-cloud-alibaba.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!--稳定版本，替代spring security bom内置-->
+            <dependency>
+                <groupId>org.springframework.security.oauth</groupId>
+                <artifactId>spring-security-oauth2</artifactId>
+                <version>${security.oauth.version}</version>
+            </dependency>
+            <!--swagger 最新依赖内置版本-->
+            <dependency>
+                <groupId>io.swagger</groupId>
+                <artifactId>swagger-models</artifactId>
+                <version>${swagger.core.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.swagger</groupId>
+                <artifactId>swagger-annotations</artifactId>
+                <version>${swagger.core.version}</version>
+            </dependency>
+            <!--fastjson 版本-->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
+            </dependency>
+            <!--web 模块-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
+                <version>${spring-boot.version}</version>
+                <exclusions>
+                    <!--排除tomcat依赖-->
+                    <exclusion>
+                        <artifactId>spring-boot-starter-tomcat</artifactId>
+                        <groupId>org.springframework.boot</groupId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
     <dependencies>
+        <!--配置文件处理器-->
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>${junit_version}</version>
-            <scope>test</scope>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
         </dependency>
+        <!--配置文件加解密-->
         <dependency>
-            <groupId>org.hamcrest</groupId>
-            <artifactId>hamcrest-all</artifactId>
-            <version>${hamcrest_version}</version>
-            <scope>test</scope>
+            <groupId>com.github.ulisesbocchio</groupId>
+            <artifactId>jasypt-spring-boot-starter</artifactId>
+            <version>${jasypt.version}</version>
         </dependency>
+        <!--监控-->
         <dependency>
-            <groupId>org.mockito</groupId>
-            <artifactId>mockito-core</artifactId>
-            <version>${mockito_version}</version>
-            <scope>test</scope>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
+        <!--监控客户端-->
         <dependency>
-            <groupId>cglib</groupId>
-            <artifactId>cglib-nodep</artifactId>
-            <version>${cglib_version}</version>
+            <groupId>de.codecentric</groupId>
+            <artifactId>spring-boot-admin-starter-client</artifactId>
+            <version>${spring-boot-admin.version}</version>
+        </dependency>
+        <!--Lombok-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <!--测试依赖-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
     </dependencies>
 
-    <profiles>
-        <profile>
-            <id>java6</id>
-            <properties>
-                <maven_jar_version>3.0.2</maven_jar_version>
-                <maven_surefire_version>2.19.1</maven_surefire_version>
-                <maven_deploy_version>2.7</maven_deploy_version>
-                <maven_compiler_version>3.1</maven_compiler_version>
-                <maven_source_version>3.0.1</maven_source_version>
-                <maven_javadoc_version>2.10.1</maven_javadoc_version>
-            </properties>
-        </profile>
-        <profile>
-            <id>test</id>
-            <activation>
-                <file>
-                    <missing>.project</missing>
-                </file>
-            </activation>
-            <modules>
-                <!--<module>dubbo-test</module>-->
-            </modules>
-        </profile>
-        <profile>
-            <id>hudson</id>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-surefire-plugin</artifactId>
-                        <configuration>
-                            <testFailureIgnore>true</testFailureIgnore>
-                        </configuration>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-        <profile>
-            <id>java8-vm-args</id>
-            <activation>
-                <jdk>[1.8,)</jdk>
-            </activation>
-            <properties>
-                <!-- Build args -->
-                <!-- if you run dubbo on java8+,please use these vm args -->
-                <argline>-server -Xms256m -Xmx512m -XX:MetaspaceSize=64m -XX:MaxMetaspaceSize=128m -Dfile.encoding=UTF-8
-                    -Djava.net.preferIPv4Stack=true
-                </argline>
-            </properties>
-        </profile>
-        <profile>
-            <id>checkstyle</id>
-            <activation>
-                <jdk>[1.8,)</jdk>
-            </activation>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-checkstyle-plugin</artifactId>
-                        <version>${maven_checkstyle_version}</version>
-                        <dependencies>
-                            <dependency>
-                                <groupId>com.puppycrawl.tools</groupId>
-                                <artifactId>checkstyle</artifactId>
-                                <version>8.9</version>
-                            </dependency>
-                        </dependencies>
-                        <executions>
-                            <execution>
-                                <id>checkstyle-validation</id>
-                                <phase>validate</phase>
-                                <configuration>
-                                    <configLocation>codestyle/checkstyle.xml</configLocation>
-                                    <suppressionsLocation>codestyle/checkstyle-suppressions.xml</suppressionsLocation>
-                                    <encoding>UTF-8</encoding>
-                                    <consoleOutput>true</consoleOutput>
-                                    <failOnViolation>true</failOnViolation>
-                                    <excludes>**/JSONWriter.java</excludes>
-                                </configuration>
-                                <goals>
-                                    <goal>check</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-        <profile>
-            <id>release</id>
-            <build>
-                <plugins>
-
-                </plugins>
-            </build>
-        </profile>
-    </profiles>
-
     <build>
-        <!-- Used for packaging NOTICE & LICENSE to each sub-module jar-->
+        <finalName>${project.name}</finalName>
         <resources>
             <resource>
                 <directory>src/main/resources</directory>
-                <filtering>false</filtering>
-            </resource>
-            <resource>
-                <directory>${maven.multiModuleProjectDirectory}</directory>
-                <targetPath>META-INF/</targetPath>
-                <filtering>false</filtering>
-                <includes>
-                    <include>NOTICE</include>
-                    <include>LICENSE</include>
-                </includes>
+                <filtering>true</filtering>
             </resource>
         </resources>
-        <plugins>
-            <plugin>
-                <artifactId>maven-source-plugin</artifactId>
-                <version>${maven_source_version}</version>
-                <executions>
-                    <execution>
-                        <id>attach-sources</id>
-                        <goals>
-                            <goal>jar</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <artifactId>maven-jar-plugin</artifactId>
-                <version>${maven_jar_version}</version>
-                <configuration>
-                    <archive>
-                        <addMavenDescriptor>true</addMavenDescriptor>
-                        <index>true</index>
-                        <manifest>
-                            <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
-                            <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
-                        </manifest>
-                        <manifestEntries>
-                            <Specification-Version>${project.version}</Specification-Version>
-                            <Implementation-Version>${project.version}</Implementation-Version>
-                        </manifestEntries>
-                    </archive>
-                </configuration>
-            </plugin>
-
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-deploy-plugin</artifactId>
-                <version>${maven_deploy_version}</version>
-                <configuration>
-                    <skip>${skip_maven_deploy}</skip>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>${maven_compiler_version}</version>
-                <configuration>
-                    <compilerArgument>-proc:none</compilerArgument>
-                    <fork>true</fork>
-                    <source>${java_source_version}</source>
-                    <target>${java_target_version}</target>
-                    <encoding>${file_encoding}</encoding>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.jacoco</groupId>
-                <artifactId>jacoco-maven-plugin</artifactId>
-                <version>${maven_jacoco_version}</version>
-                <executions>
-                    <execution>
-                        <id>jacoco-initialize</id>
-                        <goals>
-                            <goal>prepare-agent</goal>
-                        </goals>
-                        <configuration>
-                            <propertyName>jacocoArgLine</propertyName>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>jacoco-site</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>report</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.rat</groupId>
-                <artifactId>apache-rat-plugin</artifactId>
-                <version>${apache-rat-plugin.version}</version>
-                <executions>
-                    <execution>
-                        <id>verify.rat</id>
-                        <phase>verify</phase>
-                        <goals>
-                            <goal>check</goal>
-                        </goals>
-                        <configuration>
-                            <excludes>
-                                <exclude>**/*.versionsBackup</exclude>
-                                <exclude>**/.idea/</exclude>
-                                <exclude>**/*.iml</exclude>
-                                <exclude>**/*.txt</exclude>
-                                <exclude>**/*.load</exclude>
-                                <exclude>**/*.flex</exclude>
-                                <exclude>**/*.fc</exclude>
-                                <exclude>**/*.javascript</exclude>
-                                <exclude>**/*.properties</exclude>
-                                <exclude>**/*.thrift</exclude>
-                                <exclude>**/*.sh</exclude>
-                                <exclude>**/*.bat</exclude>
-                                <exclude>**/*.md</exclude>
-                                <exclude>.git/</exclude>
-                                <exclude>.gitignore</exclude>
-                                <!-- ASF jenkins box puts the Maven repo in our root directory. -->
-                                <exclude>.repository/</exclude>
-                                <exclude>**/.settings/*</exclude>
-                                <exclude>**/.classpath</exclude>
-                                <exclude>**/.project</exclude>
-                                <exclude>**/target/**</exclude>
-                                <exclude>**/*.log</exclude>
-                                <exclude>CODE_OF_CONDUCT.md</exclude>
-                                <exclude>.codecov.yml</exclude>
-                                <exclude>.travis.yml</exclude>
-                                <exclude>PULL_REQUEST_TEMPLATE.md</exclude>
-                                <exclude>CONTRIBUTING.md</exclude>
-                                <exclude>README.md</exclude>
-                                <exclude>**/codestyle/*</exclude>
-                                <exclude>**/resources/META-INF/**</exclude>
-                            </excludes>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-release-plugin</artifactId>
-                <version>2.5.3</version>
-                <configuration>
-                    <autoVersionSubmodules>true</autoVersionSubmodules>
-                    <useReleaseProfile>false</useReleaseProfile>
-                    <releaseProfiles>release</releaseProfiles>
-                    <goals>deploy</goals>
-                    <arguments>${arguments}</arguments>
-                </configuration>
-            </plugin>
-        </plugins>
-
         <pluginManagement>
             <plugins>
-                <!-- keep surefire and failsafe in sync -->
                 <plugin>
-                    <artifactId>maven-surefire-plugin</artifactId>
-                    <version>2.19.1</version>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                    <version>${spring-boot.version}</version>
+                    <configuration>
+                        <finalName>${project.build.finalName}</finalName>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <goals>
+                                <goal>repackage</goal>
+                            </goals>
+                        </execution>
+                    </executions>
                 </plugin>
                 <plugin>
-                    <artifactId>maven-clean-plugin</artifactId>
-                    <version>3.0.0</version>
+                    <groupId>io.fabric8</groupId>
+                    <artifactId>docker-maven-plugin</artifactId>
+                    <version>${docker.plugin.version}</version>
+                    <configuration>
+                        <!-- Docker Remote Api-->
+                        <dockerHost>${docker.host}</dockerHost>
+                        <!-- Docker 镜像私服-->
+                        <registry>${docker.registry}</registry>
+                        <!-- 认证信息-->
+                        <authConfig>
+                            <push>
+                                <username>${docker.username}</username>
+                                <password>${docker.password}</password>
+                            </push>
+                        </authConfig>
+                        <images>
+                            <image>
+                                <!-- 镜像名称： 172.17.0.111/library/pig-gateway:2.6.3-->
+                                <name>${docker.registry}/${docker.namespace}/${project.name}:${project.version}</name>
+                                <build>
+                                    <dockerFile>${project.basedir}/Dockerfile</dockerFile>
+                                </build>
+                            </image>
+                        </images>
+                    </configuration>
                 </plugin>
-                <plugin>
-                    <groupId>org.codehaus.mojo</groupId>
-                    <artifactId>build-helper-maven-plugin</artifactId>
-                    <version>1.10</version>
-                </plugin>
-
             </plugins>
         </pluginManagement>
+        <plugins>
+            <!--打包jar 与git commit 关联插件-->
+            <plugin>
+                <groupId>pl.project13.maven</groupId>
+                <artifactId>git-commit-id-plugin</artifactId>
+                <version>${git.commit.plugin}</version>
+            </plugin>
+            <!--代码格式插件，默认使用spring 规则-->
+            <plugin>
+                <groupId>io.spring.javaformat</groupId>
+                <artifactId>spring-javaformat-maven-plugin</artifactId>
+                <version>${spring.checkstyle.plugin}</version>
+            </plugin>
+        </plugins>
     </build>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>aliyun-plugin</id>
+            <url>https://maven.aliyun.com/repository/public</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
+
+    <profiles>
+        <profile>
+            <id>dev</id>
+            <properties>
+                <!-- 环境标识，需要与配置文件的名称相对应 -->
+                <profiles.active>dev</profiles.active>
+            </properties>
+            <activation>
+                <!-- 默认环境 -->
+                <activeByDefault>true</activeByDefault>
+            </activation>
+        </profile>
+    </profiles>
+
 </project>
