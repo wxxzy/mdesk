@@ -2,24 +2,19 @@ package com.example.dubodemo;
 
 import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import com.alibaba.nacos.api.config.annotation.NacosValue;
-import com.alibaba.nacos.spring.context.annotation.config.NacosPropertySource;
-import com.example.dubodemo.influxdb.InfluxDBDemo;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.scheduling.annotation.EnableScheduling;
-import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.Random;
-
-//import com.alibaba.dubbo.spring.boot.annotation.EnableDubboConfiguration;
-
 @SpringBootApplication
 @EnableScheduling
 //@EnableDubboConfiguration
-@NacosPropertySource(dataId = "bamboo.test", autoRefreshed = true)
+//@NacosPropertySource(dataId = "bamboo.test", autoRefreshed = true)
 public class DubodemoApplication {
 
 
@@ -33,10 +28,8 @@ public class DubodemoApplication {
         InfluxDBDemo.insert(random.nextInt(1000));
     }*/
 
-    @NacosValue(value = "${service.name:1}", autoRefreshed = true)
-    private String serverName;
-
     @RestController
+    @RefreshScope
     public class TestController {
 
         @GetMapping(value = "/hello")
@@ -44,6 +37,9 @@ public class DubodemoApplication {
         public String hello() {
             return "Hello Sentinel";
         }
+
+        @Value("${service.name}")
+        private String serverName;
 
         @GetMapping(value = "/test")
         @ResponseBody
