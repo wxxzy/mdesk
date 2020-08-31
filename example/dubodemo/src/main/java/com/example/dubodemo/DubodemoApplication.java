@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication
 @EnableScheduling
 //@EnableDubboConfiguration
-//@NacosPropertySource(dataId = "bamboo.test", autoRefreshed = true)
 public class DubodemoApplication {
 
 
