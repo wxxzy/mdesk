@@ -1,0 +1,37 @@
+@startuml
+
+title 场景1：问诊（前置问诊，应用：官网，药方云，三方合作）
+
+(*) -down-> "登录"
+note left
+* 调用中台登录接口
+end note
+partition 选择就诊人 {
+-right-> === S1 ===
+--> "就诊人列表"
+--> "新增/修改就诊人"
+note right
+* 调用中台实名认证接口
+* 调用中台就诊人同步接口
+end note
+--> === S2 ===
+}
+
+-right-> "病情描述"
+note right
+* 调用中台症状查询疾病（ICD10）接口
+end note
+if (是否付费?) then
+-->[yes] "支付确认页"
+note left
+* 调用药网优惠券接口
+* 调用中台支付接口
+* 支付成功中台回调接口
+end note
+--> "发起问诊"
+else
+-->[no] "发起问诊"
+endif
+
+--> (*)
+@enduml
