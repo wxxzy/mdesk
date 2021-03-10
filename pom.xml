@@ -36,7 +36,7 @@
 
     <modules>
         <module>example</module>
-        <module>plugin</module>
+        <module>sunshinePlugin</module>
 
     </modules>
 
