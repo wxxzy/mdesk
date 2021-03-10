@@ -1,0 +1,22 @@
+@startuml
+object 药店{
+    drugstore_id:药店ID
+    drugstore_parent_uid :父节点
+                null或0都是单体药店，
+                1为连锁总店
+                其他情况为连锁分店
+
+}
+object Object02
+object Object03
+object Object04
+object Object05
+object Object06
+object Object07
+object Object08
+
+Object01 <|-- Object02
+Object03 *-- Object04
+Object05 o-- "4" Object06
+Object07 .. Object08 : some labels
+@enduml
