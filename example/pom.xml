@@ -16,7 +16,6 @@
     <modules>
         <module>es</module>
         <module>dubodemo</module>
-        <module>interactive-graph-neo4j</module>
         <module>adminserver</module>
         <module>websocket</module>
         <module>mdesks-rpc</module>

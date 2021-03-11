@@ -1,17 +1,15 @@
 package com.example.dubodemo;
 
 import com.alibaba.csp.sentinel.annotation.SentinelResource;
-import com.example.dubodemo.influxdb.InfluxDBDemo;
+import com.alibaba.nacos.api.config.annotation.NacosValue;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.scheduling.annotation.EnableScheduling;
-import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.Random;
-
-//import com.alibaba.dubbo.spring.boot.annotation.EnableDubboConfiguration;
 
 @SpringBootApplication
 @EnableScheduling
@@ -30,12 +28,22 @@ public class DubodemoApplication {
     }*/
 
     @RestController
+    @RefreshScope
     public class TestController {
 
         @GetMapping(value = "/hello")
         @SentinelResource("hello")
         public String hello() {
             return "Hello Sentinel";
+        }
+
+        @Value("${service.name}")
+        private String serverName;
+
+        @GetMapping(value = "/test")
+        @ResponseBody
+        public String get() {
+            return serverName;
         }
     }
 
